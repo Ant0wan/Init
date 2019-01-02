@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Gets and lists network interface
+ifconfig -l | tr " " "\n"
