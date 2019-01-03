@@ -2,7 +2,7 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    02 Ethernet broadcast add and network              :+:      :+:    :+:    #
+#    02 Ethernet broadcast and network                  :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
@@ -11,21 +11,23 @@
 #                                                                              #
 # **************************************************************************** #
 
-# Get info about the ethernet inferface
-ifconfig en0
+# Set ethernet inteface name depending on the OS
+#	Linux
+#		ETH='eth0'
+#	MacOS
+		ETH='en0'
 
-# Get broadcast address && IP addresses belonging to the same network
-# IPv4 boradcast address example 11.10.255.255
-#ifconfig en0 | grep -o -e "[0-9]*.[0-9]*.255.255"
+# Get info about the ethernet inferface
+#	ifconfig $ETH
+
+# Get IPv4 boradcast address / example 11.10.255.255
+	ifconfig $ETH | grep --color -E "broadcast [0-9]*.[0-9]*.[0-9]*.[0-9]*|$"
 
 # Set number of packets for ping
-NB=2
-read -p "Press [enter] to look at Network interface Addresses..."
+	NB=2
+
 # MacOS IPv4 -> ping all interfaces on broadcast adress -> list network addresses
-ifconfig en0 | grep -o -e "[0-9]*.[0-9]*.255.255" | xargs ping -c $NB >/dev/null
-arp -a | grep -v "?" | grep -o -e "[0-9]*[.][0-9]*[.][0-9]*[.][0-9]*"
-
-#if [[ $ARP_OUTPUT =~ $MASK ]]; then
-#	echo $ARP_OUTPUT
-#  fi
-
+	echo "\033[33mPress [enter] to look at Network interface Addresses...\033[0m"	
+	read -p ""
+	ifconfig $ETH | grep -o -e "[0-9]*.[0-9]*.255.255" | xargs ping -c $NB >/dev/null
+	arp -a | grep -v "?" | grep -o -e "[0-9]*[.][0-9]*[.][0-9]*[.][0-9]*"
