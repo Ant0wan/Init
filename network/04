@@ -11,8 +11,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-# https://www.freebsd.org/doc/handbook/network-routing.html
-
 # Identify default gateway using rooting table
-	netstat -r
-	
+	echo "\033[92mDefault Gateway Address: \033[0m"
+	netstat -rn | grep -e "default" | grep -o -e "[0-9]*[.][0-9]*[.][0-9]*[.][0-9]*"
+#	route get default | grep -e "gateway" | xargs echo | cut -d " " -f2
