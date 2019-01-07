@@ -11,8 +11,8 @@
 #                                                                              #
 # **************************************************************************** #
 
-# Set ethernet interface name
-	ETH=$(networksetup -listallhardwareports | sed -n /Wi-Fi/,/Ethernet/p | grep "Device" | cut -d " " -f2)
+# Recognize Ethernet network interface
+	ETH=$(networksetup -listallhardwareports | sed -n /'Hardware Port: Ethernet'/,/Ethernet/p | grep "Device" | cut -d " " -f2)
 
 # Get info about the ethernet inferface
 #	ifconfig $ETH

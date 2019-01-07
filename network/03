@@ -11,11 +11,10 @@
 #                                                                              #
 # **************************************************************************** #
 
-# Test WIFI settings to recognize WIFI network interface
-#	sudo ifconfig <interface> down
-#	sudo ifconfig <interface> up
+# Recognize WIFI network interface
+	ETH=$(networksetup -listallhardwareports | sed -n /Wi-Fi/,/Ethernet/p | grep "Device" | cut -d " " -f2)
 
 # Get WIFI mac address
 	echo "\033[92mWIFI Mac Address: \033[0m"
-	ifconfig en1 | grep -o -e "..:..:..:..:..:.."
+	ifconfig $ETH | grep -o -e "..:..:..:..:..:.."
 
