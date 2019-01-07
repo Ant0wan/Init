@@ -1,0 +1,24 @@
+#!/bin/sh
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    07                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/01/07 14:35:18 by abarthel          #+#    #+#              #
+#    Updated: 2019/01/07 14:35:18 by abarthel         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# Set DNS IP, here 8.8.8.8 is Google DNS IP
+	OTH_DNS=8.8.8.8
+
+# Set domain
+	WWW="slash16.org"
+
+# Request WWW domain name to OTH_DNS domain name system server (nslookup)
+#	nslookup $WWW $OTH_DNS
+
+# Request WWW domain name to OTH_DNS domain name system server (dig)
+	dig @$OTH_DNS $WWW | tail -n 5

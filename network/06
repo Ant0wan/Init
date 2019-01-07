@@ -6,12 +6,12 @@
 #    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/07 14:04:44 by abarthel          #+#    #+#              #
-#    Updated: 2019/01/07 14:30:53 by abarthel         ###   ########.fr        #
+#    Updated: 2019/01/07 14:34:16 by abarthel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 Use command: grep -r '/etc' -e '10.51.1.42' 2>/dev/null | head -n1 | cut -d ":" -f1
-to get the path: /etc/resolv.conf
+to get the path: /etc/resolv.conf (cf. man nslookup, p. FILES)
 
 Script for doing so,
 
