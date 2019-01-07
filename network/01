@@ -14,3 +14,7 @@
 # Get && list network interfaces
 	echo "\033[92mList of Network Interfaces: \033[0m"
 	ifconfig -l | tr " " "\n"
+
+# List with more details
+#	echo "\033[92mList of Network Interfaces: \033[0m"
+#	networksetup -listallhardwareports

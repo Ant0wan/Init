@@ -11,11 +11,8 @@
 #                                                                              #
 # **************************************************************************** #
 
-# Set ethernet inteface name depending on the OS
-#	Linux
-#		ETH='eth0'
-#	MacOS
-		ETH='en0'
+# Set ethernet interface name
+	ETH=$(networksetup -listallhardwareports | sed -n /Wi-Fi/,/Ethernet/p | grep "Device" | cut -d " " -f2)
 
 # Get info about the ethernet inferface
 #	ifconfig $ETH
