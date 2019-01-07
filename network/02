@@ -30,10 +30,10 @@
 #	echo "\033[33mPress [enter] to look at Network Interfaces connected to the same broadcast address...\033[0m"
 #	read -p ""
 #	ifconfig $ETH | grep -o -e "[0-9]*.[0-9]*.255.255" | xargs ping -c $NB >/dev/null
-#	arp -a | grep -v "?" | grep -o -e "[0-9]*[.][0-9]*[.][0-9]*[.][0-9]*"
+#	arp -a | grep -v "?" | grep -v "255.255.255.255" | grep -o -e "[0-9]*[.][0-9]*[.][0-9]*[.][0-9]*"
 
 # MacOS IPv4 -> ping to intend to reach all network interfaces -> list network addresses
 	echo "\033[33mPress [enter] to look at Network Interfaces that could connect to your interface...\033[0m"	
 	read -p ""
-	ifconfig $ETH | grep -o -e "255.255.255.255" | xargs ping -c $NB >/dev/null
-	arp -a | grep -v "?" | grep -o -e "[0-9]*[.][0-9]*[.][0-9]*[.][0-9]*"
+	ping -c $NB 255.255.255.255  >/dev/null
+	arp -a | grep -v "?" | grep -v "255.255.255.255" | grep -o -e "[0-9]*[.][0-9]*[.][0-9]*[.][0-9]*"
