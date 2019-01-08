@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# Domain name
+WWW="slash16.org"
+
+# Get more information about host
+#	ping $WWW -c1| head -n1 | grep -o -e "[0-9]*[.][0-9]*[.][0-9]*[.][0-9]*"
+
+# Set IP
+	IP_QUERY=$(ping $WWW -c1| head -n1 | grep -o -e "[0-9]*[.][0-9]*[.][0-9]*[.][0-9]*")
+
+	# Get info using whois
+whois $IP_QUERY
+
+# Server name
+whois $WWW | grep -i server
