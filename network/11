@@ -6,7 +6,7 @@
 #    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/08 15:17:58 by abarthel          #+#    #+#              #
-#    Updated: 2019/01/08 18:36:24 by abarthel         ###   ########.fr        #
+#    Updated: 2019/01/08 18:39:12 by abarthel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ The structure of the network in 42 is supposed to be as following:
 	  |         |                                       WAN    |
 	  |---- Router (nat-1.42.fr) 10.60.1.11 -------------------|---------------------
 	  |         |                                       LAN    | Manageable switch ? |
-	  |---- Virtual Local Area Network 10.11.254.254 ----------|---------------------
+	  |---- Router (Virtual) 10.11.254.254 --------------------|---------------------
 	  |         |                                       VLAN   |
 	   ---- My computer (e1r2p10.42.fr) 10.11.1.2 -------------
 
