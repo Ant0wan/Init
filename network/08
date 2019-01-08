@@ -6,12 +6,12 @@
 #    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/07 14:04:44 by abarthel          #+#    #+#              #
-#    Updated: 2019/01/07 15:26:02 by abarthel         ###   ########.fr        #
+#    Updated: 2019/01/08 12:59:34 by abarthel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 Use command: ping slash16.org -c1| head -n1 | grep -o -e "[0-9]*[.][0-9]*[.][0-9]*[.][0-9]*" | xargs whois
-to get the answer: Amazon (cf. man nslookup, p. FILES)
+to get the answer: Amazon
 
 Script for doing so,
 
