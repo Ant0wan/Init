@@ -6,11 +6,11 @@
 #    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/08 13:50:10 by abarthel          #+#    #+#              #
-#    Updated: 2019/01/08 13:52:06 by abarthel         ###   ########.fr        #
+#    Updated: 2019/01/08 15:42:29 by abarthel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# Command used: dig @8.8.8.8 42.fr | grep 42.fr. | grep -o -e "[0-9]*[.][0-9]*[.][0-9]*[.][0-9]*"
+# Command used: dig @8.8.8.8 42.fr +short
 
 Public IPs stored on Google DNSs are:
 163.172.250.12

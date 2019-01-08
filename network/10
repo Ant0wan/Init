@@ -14,8 +14,14 @@
 # Set the target
 	WWW="slash16.org"
 
-# Get the IP address of WWW using public DNS query
+# Set computer name
+	CP_NAME=$(networksetup -getcomputername)
+
+# Get the IP address of WWW using public DNS query (nslookup)
 	IP_ADD=$(nslookup slash16.fr 8.8.8.8 | sed -n /'answer'/,//p | grep -e "Address" | grep -o -e "[0-9]*[.][0-9]*[.][0-9]*[.][0-9]*")
 
+
+
 # Trace route (identify network interfaces packets are passing through)
+	echo "\033[92mNetwork interfaces between $CP_NAME and $WWW: \033[0m"
 	traceroute $IP_ADD
