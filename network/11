@@ -1,25 +1,13 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    11                                                 :+:      :+:    :+:    #
+#    11 Whois in between                                :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/08 15:17:58 by abarthel          #+#    #+#              #
-#    Updated: 2019/01/08 15:22:47 by abarthel         ###   ########.fr        #
+#    Updated: 2019/01/08 15:48:42 by abarthel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-
-#Script used,
-
-	#!/bin/sh
-
-	# Set target domain name
-		WWW="slash16.org"
-
-	# Set target IP address from public query
-		WWW="slash16.org"
-
-	# using traceroute
-		traceroute -I $WWW
+Using the 

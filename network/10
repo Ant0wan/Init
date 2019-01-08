@@ -18,9 +18,10 @@
 	CP_NAME=$(networksetup -getcomputername)
 
 # Get the IP address of WWW using public DNS query (nslookup)
-	IP_ADD=$(nslookup slash16.fr 8.8.8.8 | sed -n /'answer'/,//p | grep -e "Address" | grep -o -e "[0-9]*[.][0-9]*[.][0-9]*[.][0-9]*")
+#	IP_ADD=$(nslookup slash16.fr 8.8.8.8 | sed -n /'answer'/,//p | grep -e "Address" | grep -o -e "[0-9]*[.][0-9]*[.][0-9]*[.][0-9]*" | head -n 1)
 
-
+# Get the IP address of WWW using public DNS query (dig)
+	IP_ADD=$(dig @8.8.8.8 slash16.fr +short | head -n 1)
 
 # Trace route (identify network interfaces packets are passing through)
 	echo "\033[92mNetwork interfaces between $CP_NAME and $WWW: \033[0m"
