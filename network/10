@@ -1,0 +1,35 @@
+#!/bin/sh
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    10 Traceroute - get network interfaces IP          :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/01/08 14:12:39 by abarthel          #+#    #+#              #
+#    Updated: 2019/01/08 14:12:39 by abarthel         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# Set the target
+	WWW="slash16.org"
+
+# Set DNS target (Google)
+	DNS_IP="8.8.8.8"
+
+# Set computer name
+	CP_NAME=$(networksetup -getcomputername)
+
+# Get the IP address of WWW using public DNS query (nslookup)
+#	IP_ADD=$(nslookup $WWW $DNS_IP | sed -n /'answer'/,//p | grep -e "Address" | grep -o -e "[0-9]*[.][0-9]*[.][0-9]*[.][0-9]*" | head -n 1)
+
+# Get the IP address of WWW using public DNS query (dig)
+	IP_ADD=$(dig @$DNS_IP $WWW +short | head -n 1)
+
+# Trace route (identify network interfaces packets are passing through)
+#	echo "\033[92mNetwork interfaces between $CP_NAME and $WWW: \033[0m"
+#	traceroute $IP_ADD
+
+# Trace route (identify network interfaces IP addresses packets are passing through)
+	echo "\033[92mNetwork interfaces between $CP_NAME and $WWW: \033[0m"
+	traceroute -n $IP_ADD 2>/dev/null | grep -o -e "[0-9]*[.][0-9]*[.][0-9]*[.][0-9]*"

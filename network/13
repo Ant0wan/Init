@@ -1,0 +1,25 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    13 Reverse DNS host name                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/01/08 18:54:06 by abarthel          #+#    #+#              #
+#    Updated: 2019/01/09 15:24:57 by abarthel         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+
+The hostname is e1r2p1.42.fr.
+ 
+Script used to get the host name:
+
+	#!/bin/sh
+
+	# Set IP of host
+		IP_VAR=$(hostname | xargs host | grep -o -e "[0-9]*[.][0-9]*[.][0-9]*[.][0-9]")
+	
+	# Get hostname using reverse DNS
+		echo "\033[92mHostname (by reverse DNS):\033[0m"
+		dig -x $IP_VAR +short
