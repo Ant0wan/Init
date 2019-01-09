@@ -11,8 +11,18 @@
 #                                                                              #
 # **************************************************************************** #
 
-# Set name
+# Get previous hostname
+	PHNAME=$(hostname)
+
+# Set hostname (sysitem) name variable
 	HNAME="Antoine"
 
-# Set hostname
-	hostnamectl set-hostname $HNAME
+# Change hostname (temp)
+	hostname $HNAME
+
+# Change hostname (hostnamectl) (perm)
+#	hostnamectl set-hostname $HNAME
+
+# Change hostname in /etc/hosts ()
+	sed -i.bak /$WWW/d $HC_PATH && rm *.bak
+
