@@ -6,29 +6,27 @@
 #    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/09 15:05:43 by abarthel          #+#    #+#              #
-#    Updated: 2019/01/09 15:23:27 by abarthel         ###   ########.fr        #
+#    Updated: 2019/01/09 15:26:28 by abarthel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-The OS installed on the VM is stored in the VirtualBox Virtual Disk Image,
-path: /Users/abarthel/./VirtualBox VMs/Debian_Init/Debian_Init.vdi
+The OS installed on the VM is stored in the VirtualBox Virtual Disk Image, path: /Users/abarthel/./VirtualBox VMs/Debian_Init/Debian_Init.vdi
 
-The files for the VM settings, including .vdi, are stored in
-/Users/abarthel/./VirtualBox VMs/Debian_Init/
+The files for the VM settings, including .vdi, are stored in /Users/abarthel/./VirtualBox VMs/Debian_Init/
 
 The script used:
 
 	#!/bin/sh
 
 	# Set virtualization software name
-	#	VMSN="virtualbox"
+		VMSN="virtualbox"
 	
 	# Set disk image extension for VMSN
-	#	DISKT=".vdi"
+		DISKT=".vdi"
 
 	# Set name of the OS running on VM
-	#	OS_SEARCH="debian"
+		OS_SEARCH="debian"
 	
 	# Search DISKT of OS_SEARCH running on VMSN
-	#	echo "\033[92mDisk image containing the installed version of $OS_SEARCH:\033[0m"
-	#	find ~/. -iname *$OS_SEARCH* 2>/dev/null | grep -i $VMSN | grep $DISKT
+		echo "\033[92mDisk image containing the installed version of $OS_SEARCH:\033[0m"
+		find ~/. -iname *$OS_SEARCH* 2>/dev/null | grep -i $VMSN | grep $DISKT
