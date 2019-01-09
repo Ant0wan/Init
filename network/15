@@ -6,7 +6,7 @@
 #    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/09 12:02:31 by abarthel          #+#    #+#              #
-#    Updated: 2019/01/09 12:34:42 by abarthel         ###   ########.fr        #
+#    Updated: 2019/01/09 15:25:27 by abarthel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,16 +15,16 @@ To reroute use the following script:
 	#!/bin/sh
 
 	# Target file containing local DNS entries
-	#	HC_PATH="/etc/hosts"
+		HC_PATH="/etc/hosts"
 
 	# Set domain name target
-	#	WWW="intra.42.fr"
+		WWW="intra.42.fr"
 
 	# Set IP address target for WWW
-	#	IP_DM="46.19.122.85"
+		IP_DM="46.19.122.85"
 
 	# Add reroute address for WWW
-	#	echo "$IP_DM\t$WWW" >> $HC_PATH
+		echo "$IP_DM\t$WWW" >> $HC_PATH
 
 	# Flush DNS cache may be needed (need to be sudoer)
 	#	dscacheutil -flushcache
