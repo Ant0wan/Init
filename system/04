@@ -12,5 +12,10 @@
 # **************************************************************************** #
 
 # Get machine uptime:
-	echo "\033[92mMachine running since (hh:mm):\033[0m"
-	uptime | xargs echo | cut -d " " -f3 | sed 's/,$//'
+	if [[ $(uname) != "Linux" ]]; then
+		echo "\033[92mMachine running since (hh:mm):\033[0m"
+		uptime | xargs echo | cut -d " " -f3 | sed 's/,$//'
+	else
+		echo "\033[92mMachine running since:\033[0m"
+		uptime | xargs echo | cut -d " " -f3,4 | sed 's/,$//'
+	fi
