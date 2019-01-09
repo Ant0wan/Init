@@ -32,4 +32,4 @@
 
 # Trace route (identify network interfaces IP addresses packets are passing through)
 	echo "\033[92mNetwork interfaces between $CP_NAME and $WWW: \033[0m"
-	traceroute -n $IP_ADD
+	traceroute -n $IP_ADD 2>/dev/null | grep -o -e "[0-9]*[.][0-9]*[.][0-9]*[.][0-9]*"
