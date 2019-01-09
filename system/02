@@ -18,11 +18,9 @@
 	HNAME="Antoine"
 
 # Change hostname (temp)
+	echo "\033[92mTemporarily changed $PHNAME to $HNAME\033[0m"
 	hostname $HNAME
 
 # Change hostname (hostnamectl) (perm)
+#	echo "\033[92mPermanently changed $PHNAME to $HNAME\033[0m"
 #	hostnamectl set-hostname $HNAME
-
-# Change hostname in /etc/hosts ()
-	sed -i.bak /$WWW/d $HC_PATH && rm *.bak
-
