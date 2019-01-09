@@ -6,13 +6,11 @@
 #    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/09 15:05:43 by abarthel          #+#    #+#              #
-#    Updated: 2019/01/09 16:17:37 by abarthel         ###   ########.fr        #
+#    Updated: 2019/01/09 16:28:48 by abarthel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-The OS installed on the VM is stored in the VirtualBox Virtual Disk Image, path: /Users/abarthel/./VirtualBox VMs/Debian_Init/Debian_Init.vdi
-
-The files for the VM settings, including .vdi, are stored in /Users/abarthel/./VirtualBox VMs/Debian_Init/
+The OS installed on the VM is stored in the VirtualBox Virtual Disk Image, path: /Volumes/Storage/goinfre/abarthel/debian_networkinstall.vdi 
 
 The script used:
 
