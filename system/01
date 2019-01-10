@@ -6,7 +6,7 @@
 #    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/09 15:05:43 by abarthel          #+#    #+#              #
-#    Updated: 2019/01/10 11:35:54 by abarthel         ###   ########.fr        #
+#    Updated: 2019/01/10 17:11:43 by abarthel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ The OS installed on the VM is stored in the VirtualBox Virtual Disk Image, path:
 
 The script used:
 
-	#!/bin/sh
+	#!/bin/bash
 
 	# Set virtualization software name
 		VMSN="virtualbox"
@@ -26,7 +26,7 @@ The script used:
 		OS_SEARCH="debian"
 	
 	# Search DISKT of OS_SEARCH running on VMSN
-		echo "\033[92mDisk image containing the installed version of $OS_SEARCH:\033[0m"
+		echo -e "\033[92mDisk image containing the installed version of $OS_SEARCH:\033[0m"
 		find /Users/abarthel -iname "*$OS_SEARCH*" 2>/dev/null | grep -i $VMSN | grep $DISKT
 		find /Volumes/Storage/goinfre/abarthel/ -iname "*$OS_SEARCH*" | grep $DISKT
 		find /tmp/abarthel/ -iname "*$OS_SEARCH*" 2>/dev/null | grep $DISKT

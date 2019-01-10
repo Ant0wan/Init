@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
@@ -21,19 +21,19 @@
 	HNAME="Antoine"
 
 # Change hostname (temp)
-	hostname $HNAME 2> bin.tmp
-	if [[ $bin.tmp == "" ]]; then
-		echo "\033[92mTemporarily changed $PHNAME to $HNAME\033[0m"
+	hostname $HNAME 2> bin
+	if [[ $bin != "" ]]; then
+		echo -e "\033[92mTemporarily changed $PHNAME to $HNAME\033[0m"
 	else
-		echo "\033[31mCannot changed $PHNAME to $HNAME\033[0m"
+		echo -e "\033[31mCannot changed $PHNAME to $HNAME\033[0m"
 	fi
-	rm -f bin.tmp
+	rm -f bin
 
 # Change hostname (hostnamectl) (perm)
-#	hostnamectl set-hostname $HNAME
-#	if [[ $bin.tmp == "" ]]; then
-#		echo "\033[92mTemporarily changed $PHNAME to $HNAME\033[0m"
+#	hostnamectl set-hostname $HNAME 2> bin
+#	if [[ $bin != "" ]]; then
+#		echo -e "\033[92mTemporarily changed $PHNAME to $HNAME\033[0m"
 #	else
-#		echo "\033[31mCannot changed $PHNAME to $HNAME\033[0m"
+#		echo -e "\033[31mCannot changed $PHNAME to $HNAME\033[0m"
 #	fi
-#	rm -f bin.tmp
+#	rm -f bin
