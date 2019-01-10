@@ -1,0 +1,20 @@
+#!/bin/sh
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    05 SSH service status                              :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/01/10 14:56:48 by abarthel          #+#    #+#              #
+#    Updated: 2019/01/10 14:56:48 by abarthel         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# run su command and log as root
+
+# Get full SSH service status 
+#	service ssh status 
+
+# Get SSH service status (run, stop, etc.)
+	service ssh status | grep -i "Active" | xargs echo
