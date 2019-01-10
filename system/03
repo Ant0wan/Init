@@ -6,7 +6,7 @@
 #    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/09 17:24:17 by abarthel          #+#    #+#              #
-#    Updated: 2019/01/10 15:06:43 by abarthel         ###   ########.fr        #
+#    Updated: 2019/01/10 16:53:15 by abarthel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,5 +28,4 @@ Or use,
 		$PH=$(hostname)
 
 	# Change hostname (hostnamectl) (perm)
-		echo "\033[92mPermanently changed $PH to $HNAME\033[0m"
 		hostnamectl set-hostname $HNAME

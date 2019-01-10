@@ -2,7 +2,7 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    07                                                 :+:      :+:    :+:    #
+#    07 SSH service PID                                 :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
@@ -12,8 +12,21 @@
 # **************************************************************************** #
 
 # Get SSH service Process ID
-#	cat /var/run/sshd.pid
+#	cat /var/run/sshd.pid > bin2
+#	if [[ $bin2 == "" ]]; then
+#		echo "\033[31mNo SSH service has been found\033[0m"
+#	else
+#		echo "\033[92mSSH service PID:\033[0m"
+#		echo $bin2
+#	fi
+#	rm -f bin2
 
 # Get SSH service Process ID (ps aux)
-	ps aux | grep shh | grep -v grep | grep sbin | awk '{print $2}'
-
+	ps aux | grep shh | grep -v grep | grep sbin | awk '{print $2}' > bin2
+	if [[ $bin2 == "" ]]; then
+		echo "\033[31mNo SSH service has been found\033[0m"
+	else
+		echo "\033[92mSSH service PID:\033[0m"
+		echo $bin2
+	fi
+	rm -f bin2
