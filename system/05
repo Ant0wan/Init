@@ -19,4 +19,4 @@
 
 # Get SSH service status (run, stop, etc.)
 	SSH_STATUS=$(service ssh status | grep -i "Active" | xargs echo | cut -c 9-)
-	echo "\033[92mSSH Service Status: $SSH_STATUS \033[0m"
+	echo "\033[92mSSH Service Status: \033[0m$SSH_STATUS"
