@@ -2,7 +2,7 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    05 Restart SSH service                             :+:      :+:    :+:    #
+#    06 Restart SSH service                             :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
@@ -21,4 +21,9 @@
 #	service ssh restart
 
 # Restart SSH service (systemctl)
-	systemctl restart ssh
+	systemctl restart ssh 2>/dev/null
+	if [[ $? == 0 ]]; then
+		echo "\033[32mSSH service restart successful\033[0m"
+	else
+		echo "\033[31mSSH service restart failed\033[0m"
+	fi

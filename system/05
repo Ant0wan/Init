@@ -18,5 +18,10 @@
 #	service ssh status 
 
 # Get SSH service status (run, stop, etc.)
-	SSH_STATUS=$(service ssh status | grep -i "Active" | xargs echo | cut -c 9-)
-	echo "\033[92mSSH Service Status: \033[0m$SSH_STATUS"
+	service ssh status 2> dd.tmp | grep -i "Active" | xargs echo | cut -c 9-
+	if [[ $dd.tmp == "" ]]; then
+		echo "\033[92mSSH service status: \033[0m$SSH_STATUS"
+	else
+		echo "\033[31mSSH service status unknown\033[0m"
+	fi
+	rm -f dd.tmp

@@ -21,9 +21,19 @@
 	HNAME="Antoine"
 
 # Change hostname (temp)
-	echo "\033[92mTemporarily changed $PHNAME to $HNAME\033[0m"
-	hostname $HNAME
+	hostname $HNAME 2> bin.tmp
+	if [[ $bin.tmp == "" ]]; then
+		echo "\033[92mTemporarily changed $PHNAME to $HNAME\033[0m"
+	else
+		echo "\033[31mCannot changed $PHNAME to $HNAME\033[0m"
+	fi
+	rm -f bin.tmp
 
 # Change hostname (hostnamectl) (perm)
-#	echo "\033[92mPermanently changed $PHNAME to $HNAME\033[0m"
 #	hostnamectl set-hostname $HNAME
+#	if [[ $bin.tmp == "" ]]; then
+#		echo "\033[92mTemporarily changed $PHNAME to $HNAME\033[0m"
+#	else
+#		echo "\033[31mCannot changed $PHNAME to $HNAME\033[0m"
+#	fi
+#	rm -f bin.tmp
