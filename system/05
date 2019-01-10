@@ -11,7 +11,8 @@
 #                                                                              #
 # **************************************************************************** #
 
-# run su command and log as root
+# Log as root
+#	su
 
 # Get full SSH service status 
 #	service ssh status 

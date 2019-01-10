@@ -2,28 +2,23 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    02 Set a new hostname                              :+:      :+:    :+:    #
+#    05 Restart SSH service                             :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2019/01/09 16:33:49 by abarthel          #+#    #+#              #
-#    Updated: 2019/01/09 16:33:49 by abarthel         ###   ########.fr        #
+#    Created: 2019/01/10 14:56:48 by abarthel          #+#    #+#              #
+#    Updated: 2019/01/10 14:56:48 by abarthel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Log as root
 #	su
 
-# Get previous hostname
-	PHNAME=$(hostname)
+# Restart SSH service (using /etc/init.d/ssh)
+#	/etc/init.d/ssh restart
 
-# Set hostname (sysitem) name variable
-	HNAME="Antoine"
+# Restart SSH service (service)
+#	service ssh restart
 
-# Change hostname (temp)
-	echo "\033[92mTemporarily changed $PHNAME to $HNAME\033[0m"
-	hostname $HNAME
-
-# Change hostname (hostnamectl) (perm)
-#	echo "\033[92mPermanently changed $PHNAME to $HNAME\033[0m"
-#	hostnamectl set-hostname $HNAME
+# Restart SSH service (systemctl)
+	systemctl restart ssh
