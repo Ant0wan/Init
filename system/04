@@ -12,15 +12,10 @@
 # **************************************************************************** #
 
 # Get machine uptime:
-	if [[ $(uname) != "Linux" ]]; then
-		if [[ $(uptime) == *"day"*  ]]; then
-			echo "\033[92mMachine running for (ddd hh:mm):\033[0m"
-			uptime | xargs echo | cut -d " " -f3,4,5 | sed 's/,//g'
-		else
-			echo "\033[92mMachine running for (hh:mm):\033[0m"
-			uptime | xargs echo | cut -d " " -f3 | sed 's/,$//'
-		fi
+	if [[ $(uptime) == *"day"*  ]]; then
+		echo "\033[92mMachine running for (ddd hh:mm):\033[0m"
+		uptime | xargs echo | cut -d " " -f3,4,5 | sed 's/,//g'
 	else
-		echo "\033[92mMachine running for:\033[0m"
-		uptime | xargs echo | cut -d " " -f3,4 | sed 's/,$//'
+		echo "\033[92mMachine running for (hh:mm):\033[0m"
+		uptime | xargs echo | cut -d " " -f3 | sed 's/,$//'
 	fi
