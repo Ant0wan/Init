@@ -1,0 +1,19 @@
+#!/bin/sh
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    07                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/01/10 15:11:17 by abarthel          #+#    #+#              #
+#    Updated: 2019/01/10 15:11:17 by abarthel         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# Get SSH service Process ID
+#	cat /var/run/sshd.pid
+
+# Get SSH service Process ID (ps aux)
+	ps aux | grep shh | grep -v grep | grep sbin | awk '{print $2}'
+
