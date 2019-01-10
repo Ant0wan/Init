@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
@@ -16,24 +16,9 @@
 
 # Restart SSH service (using /etc/init.d/ssh)
 #	/etc/init.d/ssh restart
-#	if [[ $? == 0 ]]; then
-#		echo -e "\033[32mSSH service restart successful\033[0m"
-#	else
-#		echo -e "\033[31mSSH service restart failed\033[0m"
-#	fi
 
 # Restart SSH service (service)
 #	service ssh restart
-#	if [[ $? == 0 ]]; then
-#		echo -e "\033[32mSSH service restart successful\033[0m"
-#	else
-#		echo -e "\033[31mSSH service restart failed\033[0m"
-#	fi
 
 # Restart SSH service (systemctl)
-	systemctl restart ssh 2>/dev/null
-	if [[ $? == 0 ]]; then
-		echo -e "\033[32mSSH service restart successful\033[0m"
-	else
-		echo -e "\033[31mSSH service restart failed\033[0m"
-	fi
+	systemctl restart ssh

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
@@ -15,19 +15,7 @@
 #	su
 
 # Get full SSH service status 
-#	service ssh status 2> dd
-#	if [[ $dd != "" ]]; then
-#		echo -e "\033[92mSSH service status: \033[0m$SSH_STATUS"
-#	else
-#		echo -e "\033[31mSSH service status unknown\033[0m"
-#	fi
-#	rm -f dd
+#	service ssh status
 
 # Get SSH service status (run, stop, etc.)
-	service ssh status 2> dd | grep -i "Active" | xargs echo | cut -c 9-
-	if [[ $dd != "" ]]; then
-		echo -e "\033[92mSSH service status: \033[0m$SSH_STATUS"
-	else
-		echo -e "\033[31mSSH service status unknown\033[0m"
-	fi
-	rm -f dd
+	service ssh status | grep -i "Active" | xargs echo | cut -c 9-
