@@ -6,11 +6,11 @@
 #    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/09 15:05:43 by abarthel          #+#    #+#              #
-#    Updated: 2019/01/09 17:47:48 by abarthel         ###   ########.fr        #
+#    Updated: 2019/01/10 11:35:54 by abarthel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-The OS installed on the VM is stored in the VirtualBox Virtual Disk Image, path: /Volumes/Storage/goinfre/abarthel/debian_networkinstall.vdi 
+The OS installed on the VM is stored in the VirtualBox Virtual Disk Image, path: /tmp/abarthel/debianontmp.vdi 
 
 The script used:
 
@@ -29,5 +29,6 @@ The script used:
 		echo "\033[92mDisk image containing the installed version of $OS_SEARCH:\033[0m"
 		find /Users/abarthel -iname "*$OS_SEARCH*" 2>/dev/null | grep -i $VMSN | grep $DISKT
 		find /Volumes/Storage/goinfre/abarthel/ -iname "*$OS_SEARCH*" | grep $DISKT
-
+		find /tmp/abarthel/ -iname "*$OS_SEARCH*" 2>/dev/null | grep $DISKT
+		
 To know more on the version installed, start VM, open a terminal and use: uname -a
