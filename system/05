@@ -19,8 +19,4 @@
 
 # Get SSH service status (run, stop, etc.)
 	SSH_STATUS=$(service ssh status | grep -i "Active" | xargs echo | cut -c 9-)
-	if [[ $SSH_STATUS == "" ]]; then
-		echo "\033[91mNo SSH service found / Error\033[0m"
-	else
-		echo "\033[92mSSH Service Status: $SSH_STATUS \033[0m"
-	fi
+	echo "\033[92mSSH Service Status: $SSH_STATUS \033[0m"
