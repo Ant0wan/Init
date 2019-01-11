@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    01  Virtual Disk Image                             :+:      :+:    :+:    #
+#    01 Virtual Disk Image                              :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/09 15:05:43 by abarthel          #+#    #+#              #
-#    Updated: 2019/01/10 17:19:51 by abarthel         ###   ########.fr        #
+#    Updated: 2019/01/11 12:12:54 by abarthel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,9 +26,14 @@ The script used:
 		OS_SEARCH="debian"
 	
 	# Search DISKT of OS_SEARCH running on VMSN
-		echo "\033[92mDisk image containing the installed version of $OS_SEARCH:\033[0m"
-		find /Users/abarthel -iname "*$OS_SEARCH*" 2>/dev/null | grep -i $VMSN | grep $DISKT
-		find /Volumes/Storage/goinfre/abarthel/ -iname "*$OS_SEARCH*" | grep $DISKT
-		find /tmp/abarthel/ -iname "*$OS_SEARCH*" 2>/dev/null | grep $DISKT
-		
+		if PATH=$(find /Users/abarthel -iname "*$OS_SEARCH*" 2>/dev/null | grep -i $VMSN | grep $DISKT ||
+			find /Volumes/Storage/goinfre/abarthel/ -iname "*$OS_SEARCH*" | grep $DISKT ||
+			find /tmp/abarthel/ -iname "*$OS_SEARCH*" 2>/dev/null | grep $DISKT) ; then
+			echo "\033[92mDisk image containing the installed version of $OS_SEARCH:\033[0m"
+			echo $PATH
+		else
+			echo "\033[31mCould not find disk image containing the installed version of $OS_SEARCH\033[0m"
+			exit
+		fi	
+
 To know more on the version installed, start VM, open a terminal and use: uname -a
