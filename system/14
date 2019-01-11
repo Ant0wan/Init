@@ -12,4 +12,4 @@
 # **************************************************************************** #
 
 # Put a process in foreground using &
-	tail -f /var/log/syslog &
+	tail -f /var/log/syslog 2>/dev/null &

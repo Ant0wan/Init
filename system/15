@@ -21,7 +21,7 @@
 		exit
 	else
 		if kill $KPID; then
-			echo "\033[92mProcess $KPID has been successfully killed\033[0m"
+			echo "\033[92mProcess \033[0m$KPID\033[92m has been successfully killed\033[0m"
 		else
 			echo "\033[31mProcess $KPID could not be killed\033[0m"
 			exit
