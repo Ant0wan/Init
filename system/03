@@ -6,15 +6,15 @@
 #    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/09 17:24:17 by abarthel          #+#    #+#              #
-#    Updated: 2019/01/11 12:19:34 by abarthel         ###   ########.fr        #
+#    Updated: 2019/01/11 12:36:47 by abarthel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-#Edit /etc/hosts for permanent hostname change.
+Edit /etc/hosts for permanent hostname change.
 
-#Also edit, /etc/hostname.
+Also edit, /etc/hostname.
 
-#Or use,
+Or use,
 
 	#!/bin/sh
 

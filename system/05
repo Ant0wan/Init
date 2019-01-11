@@ -15,7 +15,17 @@
 #	su
 
 # Get full SSH service status 
-#	service ssh status
+#	if ! SSH_STATUS=$(systemctlstatus ssh 2>/dev/null); then
+#		echo "\033[31mCould not tell SSH service status\033[0m"
+#		exit
+#	else
+#		$SSH_STATUS | grep -i Active | xargs echo | cut -c 9-
+#	fi
 
 # Get SSH service status (run, stop, etc.)
-	service ssh status | grep -i "Active" | xargs echo | cut -c 9-
+	if ! SSH_STATUS=$(service ssh status 2>/dev/null); then
+		echo "\033[31mCould not tell SSH service status\033[0m"
+		exit
+	else
+		$SSH_STATUS | grep -i Active | xargs echo | cut -c 9-
+	fi
