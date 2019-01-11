@@ -15,10 +15,25 @@
 #	su
 
 # Restart SSH service (using /etc/init.d/ssh)
-#	/etc/init.d/ssh restart
+#	if /etc/init.d/ssh restart 2>/dev/null; then
+#		echo "\033[92mSSH service restarted successfully\033[0m"
+#	else
+#		echo "\033[31mSSH service failed to restart\033[0m"
+#		exit
+#	fi
 
 # Restart SSH service (service)
-#	service ssh restart
+#	if service ssh restart 2>/dev/null; then
+#		echo "\033[92mSSH service restarted successfully\033[0m"
+#	else
+#		echo "\033[31mSSH service failed to restart\033[0m"
+#		exit
+#	fi
 
 # Restart SSH service (systemctl)
-	systemctl restart ssh
+	if systemctl restart ssh 2>/dev/null; then
+		echo "\033[92mSSH service restarted successfully\033[0m"
+	else
+		echo "\033[31mSSH service failed to restart\033[0m"
+		exit
+	fi
