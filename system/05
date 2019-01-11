@@ -27,5 +27,5 @@
 		echo "\033[31mCould not tell SSH service status\033[0m"
 		exit
 	else
-		$SSH_STATUS | grep -i Active | xargs echo | cut -c 9-
+		echo $SSH_STATUS | awk -v FS="(Active|Process)" '{print $2}' 2>/dev/null
 	fi

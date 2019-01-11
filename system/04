@@ -17,7 +17,7 @@
 		exit
 	fi
 
-	if PRINT=$(echo $TIME |awk -v FS="(up|,)" '{print $2}' 2>/dev/null) ; then
+	if PRINT=$(echo $TIME | awk -v FS="(up|,)" '{print $2}' 2>/dev/null) ; then
 		echo "\033[92mMachine running for:\033[0m"
 		echo $PRINT
 	else
