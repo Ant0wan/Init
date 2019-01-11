@@ -12,7 +12,25 @@
 # **************************************************************************** #
 
 # Get SSH service Process ID
-#	cat /var/run/sshd.pid
+#	if PID=$(cat /var/run/sshd.pid 2>/dev/null); then
+#		echo "\033[92mSSH service PID:\033[0m"
+#	else
+#		echo "\033[31mFailed to identify/get SSH service PID\033[0m"
+#		exit
+#	fi
 
 # Get SSH service Process ID (ps aux)
-	ps aux | grep shh | grep -v grep | grep sbin | awk '{print $2}'
+	if PS_OUT=$(ps aux 2>/dev/null); then
+		SSH_PID=$(echo $PS_OUT | grep shh | grep -v grep | grep sbin | awk '{print $2}')
+	else
+		echo "\033[31mCould not access process status\033[0m"
+		exit
+	fi
+
+	if test -z "$SSH_PID"; then	
+		echo "\033[31mFailed to identify SSH service PID\033[0m"
+		exit
+	else
+		echo "\033[92mSSH service PID:\033[0m"
+		echo $SSH_PID
+	fi
