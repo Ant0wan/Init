@@ -17,14 +17,10 @@
 		exit
 	fi
 
-	if [[ $TIME == *"day"* ]]; then
-		echo "\033[92mMachine running for (ddd hh:mm):\033[0m"
-		echo $TIME | cut -d " " -f3,4,5 | sed 's/,//g'
-	elif [[ $TIME == *"min"* ]]; then
-		echo "\033[92mMachine running for (mm):\033[0m"
-		echo $TIME | cut -d " " -f3,4 | sed 's/,$//'
+	if PRINT=$(echo $TIME |awk -v FS="(up|,)" '{print $2}' 2>/dev/null) ; then
+		echo "\033[92mMachine running for:\033[0m"
+		echo $PRINT
 	else
-		echo "\033[92mMachine running for (hh:mm):\033[0m"
-		echo $TIME | cut -d " " -f3 | sed 's/,$//'
-
+		echo "\033[31mCould not print uptime\033[0m"
+		exit
 	fi
