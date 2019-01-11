@@ -13,6 +13,7 @@
 
 # Set IP address of the target
 	IP_TARGET="10.12.1.134"
+	# To know it, run "hostname -I" on target system
 
 # Set the user name of the target
 	USER_TARGET="username"
