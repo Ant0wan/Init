@@ -20,7 +20,7 @@
 #	fi
 
 # Get SSH service Process ID (ps aux)
-	SSH_PID=$(ps aux 2>/dev/null | grep shh | grep -v grep | grep sbin | awk '{print $2}')
+	SSH_PID=$(ps aux | grep ssh | grep -v grep | grep sbin | awk '{print $2}')
 	if test -z "$SSH_PID"; then	
 		echo "\033[31mFailed to identify SSH service PID\033[0m"
 		exit
