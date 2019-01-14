@@ -6,7 +6,7 @@
 #    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/14 13:29:55 by abarthel          #+#    #+#              #
-#    Updated: 2019/01/14 13:36:57 by abarthel         ###   ########.fr        #
+#    Updated: 2019/01/14 17:16:37 by abarthel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,4 +33,4 @@ To login using SSH,
 	# Starting SSH session
 		ssh $LOGIN@$IPSSH
 
-To log using grqphic session, please refer to distri(OS) manual.
+To log using graphic session, please refer to your GUI documentation (Cnammon, GNOME...) and distribution doc.
