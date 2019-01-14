@@ -6,8 +6,45 @@
 #    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/14 11:08:36 by abarthel          #+#    #+#              #
-#    Updated: 2019/01/14 11:08:54 by abarthel         ###   ########.fr        #
+#    Updated: 2019/01/14 12:05:01 by abarthel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
+Below the list of deamon starting at boot-up on the VM,
+
+=========================
+|== Deamons at boot-up ==
+|========================
+|--	alsa-utils          |
+|--	anacron             |
+|--	avahi-daemon        |
+|--	bluetooth           |
+|--	console-setup.sh    |
+|--	cron                |
+|--	dbus                |
+|--	gdm3                |
+|--	hwclock.sh          |
+|--	keyboard-setup.sh   |
+|--	kmod                |
+|--	minissdpd           |
+|--	networking          |
+|--	network-manager     |
+|--	pppd-dns            |
+|--	procps              |
+|--	rsync               |
+|--	rsyslog             |
+|--	saned               |
+|--	speech-dispatcher   |
+|--	ssh                 |
+|--	udev                |
+|--	unattended-upgrades |
+|--	x11-common          |
+=========================
+
+
+# Gets the list of services starting at boot up
+	ls -l /etc/init.d | awk '{if(NR>1)print $9}'
+
+# Gets the list and status of services
+	systemctl list-unit-files --type=service
