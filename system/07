@@ -1,0 +1,30 @@
+#!/bin/sh
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    07 SSH service PID                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/01/10 15:11:17 by abarthel          #+#    #+#              #
+#    Updated: 2019/01/10 15:11:17 by abarthel         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# Get SSH service Process ID
+#	if PID=$(cat /var/run/sshd.pid 2>/dev/null); then
+#		echo "\033[92mSSH service PID:\033[0m"
+#	else
+#		echo "\033[31mFailed to identify/get SSH service PID\033[0m"
+#		exit
+#	fi
+
+# Get SSH service Process ID (ps aux)
+	SSH_PID=$(ps aux | grep ssh | grep -v grep | grep sbin | awk '{print $2}')
+	if test -z "$SSH_PID"; then	
+		echo "\033[31mFailed to identify SSH service PID\033[0m"
+		exit
+	else
+		echo "\033[92mSSH service PID:\033[0m"
+		echo $SSH_PID
+	fi

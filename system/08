@@ -1,0 +1,25 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    08 SSH RSA Keys                                    :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/01/10 15:36:27 by abarthel          #+#    #+#              #
+#    Updated: 2019/01/11 16:25:52 by abarthel         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+Hosts RSA public keys used by SSH are stored in /Users/[username]/.ssh/known_hosts
+
+Script used to read keys,
+
+	#!/bin/sh
+
+	# SSH RSA Keys
+		# Public Key (encrypt data by sender)
+			cat /etc/ssh/ssh_host_rsa_key.pub
+		# Private Key (decrypt received data)
+			cat /etc/ssh/ssh_host_rsa_key
+		# Hosts' Public Keys (encrypt sent data)
+			cat /Users/[username]/.ssh/known_hosts
