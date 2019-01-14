@@ -1,0 +1,24 @@
+#!/bin/sh
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    22 Add a user                                      :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/01/14 13:14:22 by abarthel          #+#    #+#              #
+#    Updated: 2019/01/14 13:14:22 by abarthel         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# Log root
+#	su
+
+# Set new username
+	NEW_USER="chilli"
+
+# Add a user (adduser)
+	adduser $NEW_USER
+
+# Delete a user (deluser)
+#	deluser $NEW_USER

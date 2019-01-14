@@ -1,0 +1,29 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    08 Who hosts this website                          :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/01/07 14:04:44 by abarthel          #+#    #+#              #
+#    Updated: 2019/01/08 13:26:48 by abarthel         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+Using the script below, the host is known to be Amazon.
+
+Script used,
+
+	#!/bin/sh
+	
+	# Domain name
+		WWW="slash16.org"
+
+	# Get more information about the host
+		ping $WWW -c1| head -n1 | grep -o -e "[0-9]*[.][0-9]*[.][0-9]*[.][0-9]*" | xargs whois
+
+	# Get info on WWW
+	#	whois $WWW
+
+	# Server name hosting WWW
+	#	whois $WWW | grep -i server

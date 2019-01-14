@@ -1,0 +1,39 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    01 Virtual Disk Image                              :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/01/09 15:05:43 by abarthel          #+#    #+#              #
+#    Updated: 2019/01/11 13:43:03 by abarthel         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+The OS installed on the VM is stored in the VirtualBox Virtual Disk Image, path: /tmp/abarthel/debianontmp.vdi 
+
+The script used:
+
+	#!/bin/sh
+
+	# Set virtualization software name
+		VMSN="virtualbox"
+	
+	# Set disk image extension for VMSN
+		DISKT=".vdi"
+
+	# Set name of the OS running on VM
+		OS_SEARCH="debian"
+	
+	# Search DISKT of OS_SEARCH running on VMSN
+		if PATH=$(find /Users/abarthel -iname "*$OS_SEARCH*" 2>/dev/null | grep -i $VMSN | grep $DISKT ||
+			find /Volumes/Storage/goinfre/abarthel/ -iname "*$OS_SEARCH*" 2>/dev/null | grep $DISKT ||
+			find /tmp/abarthel/ -iname "*$OS_SEARCH*" 2>/dev/null | grep $DISKT) ; then
+			echo "\033[92mDisk image containing the installed version of $OS_SEARCH:\033[0m"
+			echo $PATH
+		else
+			echo "\033[31mCould not find disk image containing the installed version of $OS_SEARCH\033[0m"
+			exit
+		fi	
+
+To know more on the version installed, start VM, open a terminal and use: uname -a

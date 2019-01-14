@@ -1,0 +1,38 @@
+#!/bin/bash
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    20 Lists users on a system                         :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/01/14 12:26:46 by abarthel          #+#    #+#              #
+#    Updated: 2019/01/14 12:26:46 by abarthel         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# Gets the list of users (compgen)
+	USERS=$(compgen -u 2>/dev/null)
+	if test -z "$USERS"; then
+		echo -e "\033[31mCould not get the list of users on the system\033[0m"
+		exit	
+	else
+		echo -e "\033[92mList of users on the system:\033[0m"
+		for i in $USERS
+			do
+				echo $i
+		done
+	fi
+
+# Gets the list of users all normal (non-system, not weird, etc) (/etc/passwd)
+#	USERS=$(cat /etc/passwd 2>/dev/null | grep -v "#" | cut -d ":" -f1)
+#	if test -z "$USERS"; then
+#		echo -e "\033[31mCould not get the list of users on the system\033[0m"
+#		exit	
+#	else
+#		echo -e "\033[92mList of users on the system:\033[0m"
+#		for i in $USERS
+#			do
+#				echo $i
+#		done
+#	fi
