@@ -11,4 +11,11 @@
 #                                                                              #
 # **************************************************************************** #
 
-# Add a user
+# Log root
+#	su
+
+# Set new username
+	NEW_USER="Chilli"
+
+# Add a user (adduser)
+	adduser $NEW_USER
