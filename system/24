@@ -12,7 +12,7 @@
 # **************************************************************************** #
 
 # Get root privileges
-	su
+#	su
 
 # Run apt command
 	apt list --installed
