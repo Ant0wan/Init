@@ -14,6 +14,11 @@
 echo "Please enter target login:"
 read username
 
+if [[ "$username" != *"$(cat /etc/passwd)"* ]]; then
+	echo "$username does not exist"
+	exit
+fi
+
 echo "You are about to log out and delete user $username"
 echo "Are you sure you want to delete it ? [Y/n]"
 read answer
