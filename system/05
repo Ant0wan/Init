@@ -15,19 +15,21 @@
 #	su
 
 # Get full SSH service status 
-#	if ! SSH_STATUS=$(systemctl status ssh 2>/dev/null); then
+#	SSH_STATUS=$(systemctl status ssh 2>/dev/null | grep "Active: ")
+#	if test -z "$SSH_STATUS"; then
 #		echo "\033[31mCould not tell SSH service status\033[0m"
 #		exit
 #	else
 #		echo "\033[92mSSH service status:\033[0m"
-#		echo $SSH_STATUS | awk -v FS="(Active: |Process)" '{print $2}' 2>/dev/null
+#		echo $SSH_STATUS | awk -v FS="(Active: )" '{print $2}' 2>/dev/null
 #	fi
 
 # Get SSH service status (run, stop, etc.)
-	if ! SSH_STATUS=$(service ssh status 2>/dev/null); then
+	SSH_STATUS=$(service ssh status 2>/dev/null | grep "Active: ")
+	if test -z "$SSH_STATUS"; then
 		echo "\033[31mCould not tell SSH service status\033[0m"
 		exit
 	else
 		echo "\033[92mSSH service status:\033[0m"
-		echo $SSH_STATUS | awk -v FS="(Active: |Process)" '{print $2}' 2>/dev/null
+		echo $SSH_STATUS | awk -v FS="(Active: )" '{print $2}' 2>/dev/null
 	fi
