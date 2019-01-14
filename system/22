@@ -15,7 +15,7 @@
 #	su
 
 # Set new username
-	NEW_USER="Chilli"
+	NEW_USER="chilli"
 
 # Add a user (adduser)
 	adduser $NEW_USER
