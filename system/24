@@ -15,4 +15,4 @@
 #	su
 
 # Run apt command
-	apt list --installed
+	apt list --installed | less
