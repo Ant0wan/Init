@@ -1,0 +1,19 @@
+#!/bin/sh
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    03 Virtual machine statistics                      :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/01/14 15:50:30 by abarthel          #+#    #+#              #
+#    Updated: 2019/01/14 16:28:53 by abarthel         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+config_status (){
+	echo "Processor type: $(uname -p)"
+	echo "Hardware platform: $(uname -m)
+}
+
+config_status
