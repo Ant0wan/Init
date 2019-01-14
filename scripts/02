@@ -30,6 +30,7 @@ case "$answer" in
 			fi
 		else
 			echo "\033[31mFailed to kill\033[0m $username \033[31msession(s)\033[0m"
+			echo "$username session(s) may not exist"
 			exit
 		fi;;
 	*) exit;;
