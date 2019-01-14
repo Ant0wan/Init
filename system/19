@@ -6,13 +6,11 @@
 #    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/14 11:08:36 by abarthel          #+#    #+#              #
-#    Updated: 2019/01/14 12:05:01 by abarthel         ###   ########.fr        #
+#    Updated: 2019/01/14 12:24:44 by abarthel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-
-Below the list of deamon starting at boot-up on the VM,
-
+Below the name list of services starting at boot-up on the VM,
 =========================
 |== Deamons at boot-up ==
 |========================
@@ -42,9 +40,14 @@ Below the list of deamon starting at boot-up on the VM,
 |--	x11-common          |
 =========================
 
-
 # Gets the list of services starting at boot up
 	ls -l /etc/init.d | awk '{if(NR>1)print $9}'
 
 # Gets the list and status of services
 	systemctl list-unit-files --type=service
+
+# Get details on al deamons loaded at boot
+	systemctl list-units --type service --all
+
+# Detiled list of services loaded at boot
+	systemctl list-units --type service --all | head -n -7 | awk '{if(NR>1)print $1 $2}' | sed "s/●//"
