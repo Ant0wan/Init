@@ -1,0 +1,19 @@
+#!/bin/sh
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    03 Wifi Mac Address                                :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/01/03 12:46:50 by abarthel          #+#    #+#              #
+#    Updated: 2019/01/03 12:46:50 by abarthel         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# Recognize WIFI network interface
+	ETH=$(networksetup -listallhardwareports | sed -n /Wi-Fi/,/Ethernet/p | grep "Device" | cut -d " " -f2)
+
+# Get WIFI mac address
+	echo "\033[92mWIFI Mac Address: \033[0m"
+	ifconfig $ETH | grep -o -e "..:..:..:..:..:.."

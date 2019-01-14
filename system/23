@@ -1,0 +1,36 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    23 Start new user session                          :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/01/14 13:29:55 by abarthel          #+#    #+#              #
+#    Updated: 2019/01/14 13:36:57 by abarthel         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+To login once on the system use the following script,
+
+	#!/bin/sh
+
+	# Set user login
+		LOGIN="chilli"
+
+	# Login LOGIN
+		login $LOGIN
+
+To login using SSH,
+
+	#!/bin/sh
+
+	# Set user login
+		LOGIN="chilli"
+
+	# Set IP target
+		IPSSH="10.11.200.150"
+
+	# Starting SSH session
+		ssh $LOGIN@$IPSSH
+
+To log using grqphic session, please refer to distri(OS) manual.

@@ -1,0 +1,41 @@
+#!/bin/sh
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    02 Delete user of an ongoing session               :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/01/14 13:48:16 by abarthel          #+#    #+#              #
+#    Updated: 2019/01/14 13:48:16 by abarthel         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+echo "List of logins with open session(s): \033[94m"
+who | awk '{print $1}' | uniq
+
+echo "\n\033[0mPlease enter target login:"
+read username
+
+echo "You are about to \033[31mlogout\033[0m and \033[31mdelete user\033[0m: \033[94m$username\033[0m"
+echo "Are you sure you want to delete it ? [Y/n]"
+read answer
+
+case "$answer" in 
+	"Y"|"y")
+		if pkill -KILL -u $username; then
+			echo "$username \033[92msession(s) has been killed\033[0m"
+			if deluser $username; then
+				echo "\033[92mUser\033[0m $username \033[92mhas been successfully deleted\033[0m"	
+			else
+				echo "\033[31mFailed to delete\033[0m $username"
+				exit
+			fi
+		else
+			echo "\033[31mFailed to kill\033[0m $username \033[31msession(s)\033[0m"
+			exit
+		fi;;
+	*)
+		echo "\033[32mQuit.\033[0m"
+	   	exit;;
+esac

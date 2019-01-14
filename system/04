@@ -1,0 +1,36 @@
+#!/bin/sh
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    04 Machine uptime                                  :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/01/09 17:35:08 by abarthel          #+#    #+#              #
+#    Updated: 2019/01/09 17:35:08 by abarthel         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# Get machine uptime:
+	if ! TIME=$(uptime 2>/dev/null); then
+		echo "\033[31mCould not tell uptime\033[0m"
+		exit
+	fi
+
+	if [[ $TIME == *"day"* ]]; then
+		if PRINT=$(echo $TIME | awk -v FS="(up |users)" '{print $2}' 2>/dev/null | cut -d "," -f1,2 2>/dev/null | sed "s/,/ and/" 2>/dev/null) ; then
+			echo "\033[92mMachine running for:\033[0m"
+			echo $PRINT
+		else
+			echo "\033[31mCould not print uptime\033[0m"
+			exit
+		fi
+	else
+		if PRINT=$(echo $TIME | awk -v FS="(up|,)" '{print $2}' 2>/dev/null) ; then
+			echo "\033[92mMachine running for:\033[0m"
+			echo $PRINT
+		else
+			echo "\033[31mCould not print uptime\033[0m"
+			exit
+		fi
+	fi

@@ -1,0 +1,40 @@
+#!/bin/sh
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    02 Set a new hostname                              :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/01/09 16:33:49 by abarthel          #+#    #+#              #
+#    Updated: 2019/01/09 16:33:49 by abarthel         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# Log as root
+#	su
+
+# Set hostname (sysitem) name variable
+	HNAME="Antoine"
+
+# Get previous hostname
+	if ! PHNAME=$(hostname 2>/dev/null); then
+		echo "\033[31mCould not find hostname\033[0m"
+		exit
+	fi
+
+# Change hostname (temp)
+	if ! hostname $HNAME 2>/dev/null ; then
+		echo "\033[31mCould not change hostname\033[0m"
+		exit
+	else
+		echo "\033[92mHostname \033[0m$PHNAME\033[92m changed to \033[0m$(hostname)"
+	fi
+
+# Change hostname (hostnamectl) (perm)
+#	if ! hostnamectl set-hostname $HNAME 2>/dev/null ; then
+#		echo "\033[31mCould not change hostname\033[0m"
+#		exit
+#	else
+#		echo "\033[92mHostname \033[0m$PHNAME\033[92m changed to \033[0m$(hostname)"
+#	fi

@@ -1,0 +1,29 @@
+#!/bin/sh
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    15 Kill a process                                  :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/01/10 18:14:09 by abarthel          #+#    #+#              #
+#    Updated: 2019/01/10 18:14:09 by abarthel         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# Set process name to be killed
+	PNAME="tail"
+
+# Kill the PNAME process (kill)
+	KPID=$(ps | grep $PNAME | grep -v "grep" | awk '{print $1}')
+	if test -z $KPID; then
+		echo "\033[31mProcess '$PNAME' does not exist\033[0m"
+		exit
+	else
+		if kill $KPID; then
+			echo "\033[92mProcess \033[0m$KPID\033[92m has been successfully killed\033[0m"
+		else
+			echo "\033[31mProcess $KPID could not be killed\033[0m"
+			exit
+		fi
+	fi

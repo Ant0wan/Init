@@ -1,0 +1,36 @@
+#!/bin/sh
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    02 Ethernet broadcast and network                  :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/01/03 10:34:02 by abarthel          #+#    #+#              #
+#    Updated: 2019/01/03 10:34:02 by abarthel         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# Recognize Ethernet network interface
+	ETH=$(networksetup -listallhardwareports | sed -n /'Hardware Port: Ethernet'/,/Ethernet/p | grep "Device" | cut -d " " -f2)
+
+# Get info about the ethernet inferface
+#	ifconfig $ETH
+
+# Get IPv4 broadcast address / example 11.10.255.255
+	ifconfig $ETH | grep --color -E "broadcast [0-9]*.[0-9]*.[0-9]*.[0-9]*|$"
+
+# Set number of packets for ping
+	NB=2
+
+# MacOS IPv4 -> ping all interfaces using broadcast address -> list interface addresses
+#	echo "\033[33mPress [enter] to look at Network Interfaces connected to the same broadcast address...\033[0m"
+#	read -p ""
+#	ifconfig $ETH | grep -o -e "[0-9]*.[0-9]*.255.255" | xargs ping -c $NB >/dev/null
+#	arp -a | grep -v "?" | grep -v "255.255.255.255" | grep -o -e "[0-9]*[.][0-9]*[.][0-9]*[.][0-9]*"
+
+# MacOS IPv4 -> ping to intend to reach all network interfaces -> list network addresses
+	echo "\033[33mPress [enter] to look at Network Interfaces that could connect to your interface...\033[0m"	
+	read -p ""
+	ping -c $NB 255.255.255.255  >/dev/null
+	arp -a | grep -v "?" | grep -v "255.255.255.255" | grep -o -e "[0-9]*[.][0-9]*[.][0-9]*[.][0-9]*"

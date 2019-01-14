@@ -1,0 +1,18 @@
+#!/bin/sh
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    21 Lists real users on a system                    :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/01/14 13:09:31 by abarthel          #+#    #+#              #
+#    Updated: 2019/01/14 13:11:52 by abarthel         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# Lists real users assuming /home
+	cat /etc/passwd | grep '/home' | cut -d: -f1
+
+# Lists real users assuming multi-partitionning /h1 /h2 ..
+#	cat /etc/passwd | grep -E ':/h1|:/h2' | cut -d: -f1

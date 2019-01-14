@@ -1,0 +1,26 @@
+#!/bin/sh
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    07 Select DNS for query                            :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/01/07 14:35:18 by abarthel          #+#    #+#              #
+#    Updated: 2019/01/07 14:35:18 by abarthel         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# Set DNS IP, here 8.8.8.8 is Google DNS IP
+	OTH_DNS=8.8.8.8
+
+# Set domain
+	WWW="slash16.org"
+
+# Request WWW domain name to OTH_DNS domain name system server (nslookup)
+#	echo "\033[92mDNS query result: \033[0m"
+#	nslookup $WWW $OTH_DNS | sed '$d'
+
+# Request WWW domain name to OTH_DNS domain name system server (dig)
+	echo "\033[92mDNS query result: \033[0m"
+	dig @$OTH_DNS $WWW | sed "s/;//g" | sed '$d' | sed "1d" | sed 's/^ *//g'
