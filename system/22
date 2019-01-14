@@ -19,3 +19,6 @@
 
 # Add a user (adduser)
 	adduser $NEW_USER
+
+# Delete a user (deluser)
+#	deluser $NEW_USER
