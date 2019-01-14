@@ -11,15 +11,18 @@
 #                                                                              #
 # **************************************************************************** #
 
-echo "Please enter target login:"
+echo "List of logins with open session(s): \033[94m"
+who | awk '{print $1}' | uniq
+
+echo "\n\033[0mPlease enter target login:"
 read username
 
-echo "You are about to log out and delete user $username"
+echo "You are about to \033[31mlogout\033[0m and \033[31mdelete user\033[0m: \033[94m$username\033[0m"
 echo "Are you sure you want to delete it ? [Y/n]"
 read answer
 
 case "$answer" in 
-	"Y" "y")
+	"Y"|"y")
 		if pkill -KILL -u $username; then
 			echo "$username \033[92msession(s) has been killed\033[0m"
 			if deluser $username; then
@@ -33,5 +36,7 @@ case "$answer" in
 			echo "$username session(s) may not exist"
 			exit
 		fi;;
-	*) exit;;
+	*)
+		echo "\033[32mQuit.\033[0m"
+	   	exit;;
 esac
