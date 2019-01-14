@@ -32,5 +32,18 @@ case "$answer" in
 			echo "\033[31mFailed to kill\033[0m $username \033[31msession(s)\033[0m"
 			exit
 		fi;;
+	"y")
+		if pkill -KILL -u $username; then
+			echo "$username \033[92msession(s) has been killed\033[0m"
+			if deluser $username; then
+				echo "\033[92mUser\033[0m $username \033[92mhas been successfully deleted\033[0m"	
+			else
+				echo "\033[31mFailed to delete\033[0m $username"
+				exit
+			fi
+		else
+			echo "\033[31mFailed to kill\033[0m $username \033[31msession(s)\033[0m"
+			exit
+		fi;;
 	*) exit;;
 esac
