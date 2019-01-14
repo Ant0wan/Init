@@ -2,7 +2,15 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
+<<<<<<< HEAD
 #    03 Virtual machine statistics                      :+:      :+:    :+:    #
+=======
+<<<<<<< HEAD:network/01
+#    01 - List Network interfaces                       :+:      :+:    :+:    #
+=======
+#    03 Virtual machine statistics                      :+:      :+:    :+:    #
+>>>>>>> scripts:scripts/03
+>>>>>>> network
 #                                                     +:+ +:+         +:+      #
 #    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
@@ -11,9 +19,25 @@
 #                                                                              #
 # **************************************************************************** #
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:network/01
+# Get && list network interfaces
+	echo "\033[92mList of Network Interfaces: \033[0m"
+	ifconfig -l | tr " " "\n"
+
+# List with more details
+#	echo "\033[92mList of Network Interfaces: \033[0m"
+#	networksetup -listallhardwareports
+=======
+>>>>>>> network
 config_status (){
 	echo "Processor type: $(uname -p)"
 	echo "Hardware platform: $(uname -m)
 }
 
 config_status
+<<<<<<< HEAD
+=======
+>>>>>>> scripts:scripts/03
+>>>>>>> network
