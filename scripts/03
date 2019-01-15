@@ -12,23 +12,85 @@
 # **************************************************************************** #
 
 psswd=""
-length=10
 
-while [ ${#psswd} -lt $length ]
-do
-	psswd="$psswd$(dd if=/dev/urandom bs=1 count=1 2>/dev/null | tr -dc 'A-Za-z0-9!"#$%&'\''()*+,-./:;<=>?@[\]^_`{|}~' 2>/dev/null)"
-done
-
-
-
-
-display (){
-
-	echo "password: $1"
-	echo "length: $2"
+usage () {
+echo "usage: app_name [options] required_input required_input2
+ options:
+   -a, --argument     Does something
+   -b required     Does something with "required"
+   -c, --command required     Something else
+   -d [optlistitem1 optlistitem 2 ... ]     Something with list"
+exit
 }
 
-display $psswd $length
+# ANSSI Norm
+type_selector () {
+	case "$1" in
+		"b") #binary code 0 and 1    2s
+			type='0-1'
+			;;
+		"d") #decimal 0 to 9     10s
+			type='0-9'
+			;;
+		"h") #hexaecimal 0-9 and A-F   16s
+			type='A-F0-9'
+			;;
+		"c") #capital letter alphabet A-Z   26s
+			type='A-Z'
+			;;
+		"n") #alphanum 0-9 A-Z   36s
+			type='0-9A-Z'
+			;;
+		"l") # lower case alphabet A-Z a-z  52s
+			type='A-Za-z'
+			;;
+		"a") #lower and uper alphanumerical A-Z a-z 0-9  62s
+			type='A-Za-z0-9'
+			;;
+		"s") # alphanumerical(upper lower 0-9) with special characters   70s
+			type='A-Za-z0-9!#$*%?'
+			;;
+		"S") # alphanumerical(upper lower 0-9) with more special characters    94s
+			type='A-Za-z0-9!"#$%&'\''()*+,-./:;<=>?@[\]^_`{|}~'
+			;;
+		"o") # set your own values using regex       Xs
+			if test $3; then
+				type=$3
+			else
+				usage
+			fi
+			;;
+		*)
+			echo "$0: illegal option --$1"
+			usage
+			;;
+	esac
+}
+
+display (){
+	echo "password: $1"
+}
+
+# MAIN
+
+if test $1; then
+	if test $3; then
+		type_selector $1 $2 $3
+	elif test $2; then
+		type_selector $1 $2
+	else
+		usage
+	fi
+else
+	usage
+fi
+
+while [ ${#psswd} -lt $2 ]
+do
+	psswd="$psswd$(dd if=/dev/urandom bs=1 count=1 2>/dev/null | tr -dc $type 2>/dev/null)"
+done
+
+display $psswd
 
 
 #myvar='Généralités'
