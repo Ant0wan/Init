@@ -12,18 +12,47 @@
 # **************************************************************************** #
 
 usage () {
-echo "usage: app_name [options] required_input required_input2
+echo "usage: ./03 \033[4m[-bdhcnlasSo]\033[0m \033[4m[size]\033[0m [characters]\n--help to display help page"
+exit
+}
+
+help_op (){
+echo "PASSWORD GENERATOR by abarthel\nversion 0.1\nlast update 2019-01-15\n"
+	
+echo "usage: ./03 \033[4mtype\033[0m \033[4msize\033[0m [characters]
  options:
-   -b, --argument     Does something
-   -d required     Does something with "required"
-   -h, --command required     Something else
-   -c [optlistitem1 optlistitem 2 ... ]     Something with list
-   -o [size] [A-Za-z0-9!\"#$%&'\''()*+,-./:;<=>?@[]^_\`{|}~]     Something with list"
+   --help, to display help page
+   types:
+   -b\tbinary
+   -d\tdecimal
+   -h\thexadecimal
+   -c\tcapital letters
+   -n\tupper case alphanumerical
+   -l\tlower case alphanumerical
+   -a\tlower and upper case alphanumerical
+   -s\talphanumerical(upper lower 0-9) with special characters
+   -S\talphanumerical(upper lower 0-9) with more special characters
+   -o \033[4msize\033[0m \033[4m[A-Za-z0-9!\"#$%&'\''()*+,-./:;<=>?@[]^_\`{|}~]\033[0m
+   create a password with own set characters (tr like regex) \033[4m[A-Za-z0-9!\"#$%&'\''()*+,-./:;<=>?@[]^_\`{|}~]\033[0m of size \033[4msize\033[0m
+ 
+ usage example:  
+   -b \033[4msize\033[0m, binary type password of size \033[4msize\033[0m
+
+Example:
+   get binary password of length 18 011001011011110001
+    ./03 -b 18
+   get alphanumeric password with extra special characters of length 15 \(N\'TMH\|lF\&oM6Xe
+    ./03 -S 15
+   get hexadecimal password of length 4 96E7
+    ./03 -h 4"
 exit
 }
 
 type_selector () {
 	case "$1" in
+		"--help")
+			help_op
+			;;
 		"-b") #binary code 0 and 1    2s
 			type='0-1'
 			;;
@@ -66,13 +95,15 @@ type_selector () {
 }
 
 display (){
-	echo "password: $1"
+	echo $1
 }
-
 
 # MAIN
 psswd=""
 if test $1; then
+	if [ $1 = "--help" ]; then
+		help_op
+	fi
 	if test $3; then
 		type_selector $1 $2 $3
 	elif test $2; then
