@@ -1,0 +1,40 @@
+#!/bin/sh
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    03 Password generator                              :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/01/15 11:49:06 by abarthel          #+#    #+#              #
+#    Updated: 2019/01/15 11:49:06 by abarthel         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+psswd=""
+length=10
+
+while [ ${#psswd} -lt $length ]
+do
+	psswd="$psswd$(dd if=/dev/urandom bs=1 count=1 2>/dev/null | tr -dc 'A-Za-z0-9!"#$%&'\''()*+,-./:;<=>?@[\]^_`{|}~' 2>/dev/null)"
+done
+
+
+
+
+display (){
+
+	echo "password: $1"
+	echo "length: $2"
+}
+
+display $psswd $length
+
+
+#myvar='Généralités'
+#chrlen=${#myvar}
+#oLang=$LANG oLcAll=$LC_ALL
+#LANG=C LC_ALL=C
+#bytlen=${#myvar}
+#LANG=$oLang LC_ALL=$oLcAll
+#printf "%s is %d char len, but %d bytes len.\n" "${myvar}" $chrlen $bytlen
