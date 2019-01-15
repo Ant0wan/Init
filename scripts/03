@@ -18,7 +18,6 @@ exit
 
 help_op (){
 echo "PASSWORD GENERATOR by abarthel\nversion 0.1\nlast update 2019-01-15\n"
-	
 echo "usage: ./03 \033[4mtype\033[0m \033[4msize\033[0m [characters]
  options:
    --help, to display help page
@@ -88,7 +87,7 @@ type_selector () {
 			fi
 			;;
 		*)
-			echo "$0: illegal option --$1"
+			echo "$0: illegal option -$1"
 			usage
 			;;
 	esac
@@ -98,7 +97,6 @@ display (){
 	echo $1
 }
 
-# MAIN
 psswd=""
 if test $1; then
 	if [ $1 = "--help" ]; then
