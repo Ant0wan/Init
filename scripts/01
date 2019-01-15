@@ -16,6 +16,6 @@
 
 # Get login name, user ID, home directory full path
 	cat $PW_PATH | cut -d ':' -f1,3,6 | sed "s/:/ /g" | grep -v -e "#" |
-	awk 'BEGIN { print "\033[92mLogin name                User ID      Home directory full path\033[0m"
+	awk 'BEGIN { print "Login name                User ID      Home directory full path"
 	             print " --------                  -----        ----------------------" }
-			   { printf "\033[36m%-25s \033[33m%5s            \033[37m%1s\n\033[0m", $1, $2, $3 }' | less
+			   { printf "%-25s %5s            %1s\n", $1, $2, $3 }' | less
