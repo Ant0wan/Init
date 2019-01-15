@@ -12,8 +12,8 @@
 # **************************************************************************** #
 
 # Get IP address assigned by DHCP server
-	echo "\033[92m$(hostname -s) has been assigned by DHCP server ($(ipconfig getpacket en0 | grep -e "server_identifier" | grep -o -e "[0-9]*[.][0-9]*[.][0-9]*[.][0-9]")) IP: \033[0m"
-	hostname | xargs host | grep -o -e "[0-9]*[.][0-9]*[.][0-9]*[.][0-9]"
+	echo "\033[92m$(hostname -s) has been assigned by DHCP server ($(ipconfig getpacket en0 | grep -e "server_identifier" | grep -o -e "[0-9]*[.][0-9]*[.][0-9]*[.][0-9]*")) IP: \033[0m"
+	hostname | xargs host | grep -o -e "[0-9]*[.][0-9]*[.][0-9]*[.][0-9]*"
 
 # Get your public IP address
 #	echo "\033[92m$(hostname -s) public IP address:\033[0m"
