@@ -20,9 +20,9 @@ This part can either be ran on a the Debian virtual machine or Macs (for vitual 
 
 It contains:
 
-- 
+- a script which displays only the login, UID and Path of each entry of the /etc/passwd file, 
 
-- 
+- a script which delete an ACTIVE user on the VM (make sure you logged in ssh before), 
 
 - and a password generator
 
