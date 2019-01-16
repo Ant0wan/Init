@@ -20,14 +20,13 @@ This part can either be ran on a the Debian virtual machine or Macs (for vitual 
 
 This part has been ran on a the Debian virtual machine (please refers to Virtual Machine below section).
 
+---
 
 ## Virtual Machine
 
 The following config has been used: <a href="https://www.virtualbox.org/wiki/Downloads" target="_blank">VirtualBox 6.0.2</a> + <a href="http://ftp.nl.debian.org/debian/dists/stretch/main/installer-amd64/current/images/netboot/" target="_blank">Debian netboot mini.iso</a> 2018-11-10.
 
-[![VirtualBoxMachine](https://i.imgur.com/TbLbIvc.png)](i.imgur.com/TbLbIvc.png)
-
-Virtual machine config:
+#### Virtual machine config:
 
 - Name: debian_ontmp
 - Type: Linux
@@ -35,7 +34,9 @@ Virtual machine config:
 - RAM: 2048MB
 - Disks: VirtualBox Disk Image, dynamically allocated, 8GB, path: /tmp/[login]/
 
-Settings:
+[![VirtualBoxMachine](https://i.imgur.com/TbLbIvc.png)](i.imgur.com/TbLbIvc.png)
+
+#### Settings:
 
 - Processors: 4CPUs
 
@@ -51,9 +52,19 @@ Network:
 
 This enables SSH connection required by the "system" part.
 
-Boot has been made on mini.iso.
+#### Installing Virtual Machine
 
-Root passwords: root
+- Boot has been made on mini.iso.
+
+- Configure the network
+
+[![Process1](https://i.imgur.com/ylJVIEF.png)](https://i.imgur.com/ylJVIEF.png)
+
+- Set username
+
+[![Process2](https://i.imgur.com/zajQ4n4.png)](https://i.imgur.com/zajQ4n4.png)
+
+- Root passwords: root
 
 
 
