@@ -6,13 +6,11 @@ This repository contains the scripts and answers to the <a href="https://cdn.int
 
 This repository is split in 3 different parts: network, scripts, system.
 
----
 
 ## Network
 
 The part “Network” has been done on school’s Macs running with Darwin Kernel Version 16.7.0.
 
----
 
 ## Scripts
 
@@ -28,7 +26,6 @@ It contains:
 
 [![passwordgenerator](https://i.imgur.com/IdsM678.gif)](i.imgur.com/IdsM678.gif)
 
----
 
 ## System
 
