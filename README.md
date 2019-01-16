@@ -72,3 +72,16 @@ This enables SSH connection required by the "system" part.
 
 [![Process4](https://i.imgur.com/g6IZAuI.png)](https://i.imgur.com/g6IZAuI.png)
 
+- Do not set proxy
+
+- Set username : username
+
+- Select guided disk partitionning
+
+[![Process5](https://i.imgur.com/XkQY4fS.png)](https://i.imgur.com/XkQY4fS.png)
+
+- Select the disk on which Debian will be installed
+
+[![Process6](https://i.imgur.com/NjIx3Z9.png)](https://i.imgur.com/NjIx3Z9.png)
+
+
