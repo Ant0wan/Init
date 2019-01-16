@@ -67,3 +67,8 @@ This enables SSH connection required by the "system" part.
 - Set users password: root
 
 [![Process3](https://i.imgur.com/fYCCeNJ.png)](https://i.imgur.com/fYCCeNJ.png)
+
+- Choose a mirror for doznloading Debian archive
+
+[![Process4](https://i.imgur.com/g6IZAuI.png)](https://i.imgur.com/g6IZAuI.png)
+
