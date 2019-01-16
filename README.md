@@ -6,4 +6,21 @@ This repository contains the scripts and answers to the <a href="https://cdn.int
 
 This repository is split in 3 different parts: network, scripts, system.
 
+## Network
 
+The part “Network” has been done on school’s Macs running with Darwin Kernel Version 16.7.0.
+
+
+## Scripts
+
+This part can either be ran on a the Debian virtual machine or Macs (for vitual machine, please refers to Virtual Machine below section).
+
+
+## System
+
+This part has been ran on a the Debian virtual machine (please refers to Virtual Machine below section).
+
+
+## Virtual Machine
+
+(VirtualBox + Debian netboot mini.iso 2018-11-10) with the following setup:
