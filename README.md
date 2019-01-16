@@ -94,7 +94,7 @@ This enables SSH connection required by the "system" part.
 
 [![Process7](https://i.imgur.com/uv0UeLu.png)](i.imgur.com/uv0UeLu.png)
 
-- Choose the packages: SSH server, standard system utilities and pick your favorite GUI
+- Choose the packages: SSH server, standard system utilities and pick your favorite GUI then press enter key
 
 [![Process8](https://i.imgur.com/0xaF2qY.png)](i.imgur.com/0xaF2qY.png)
 
