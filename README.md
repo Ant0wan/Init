@@ -25,4 +25,10 @@ This part has been ran on a the Debian virtual machine (please refers to Virtual
 
 The following config has been used: <a href="https://www.virtualbox.org/wiki/Downloads" target="_blank">VirtualBox 6.0.2</a> + <a href="http://ftp.nl.debian.org/debian/dists/stretch/main/installer-amd64/current/images/netboot/" target="_blank">Debian netboot mini.iso</a> 2018-11-10.
 
+Virtual machine config:
 
+-Name: debian_ontmp
+-Type: Linux
+-Version: Debian (64-bits)
+-RAM: 2048MB
+-Disks: VirtualBox Disk Image, dynamically allocated, 8GB, path: /tmp/[login]/
