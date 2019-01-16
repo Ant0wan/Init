@@ -6,10 +6,13 @@ This repository contains the scripts and answers to the <a href="https://cdn.int
 
 This repository is split in 3 different parts: network, scripts, system.
 
+---
+
 ## Network
 
 The part “Network” has been done on school’s Macs running with Darwin Kernel Version 16.7.0.
 
+---
 
 ## Scripts
 
@@ -23,38 +26,9 @@ It contains:
 
 - and a password generator
 
-```
-PASSWORD GENERATOR by abarthel
-version 0.1
-last update 2019-01-15
+[![passwordgenerator](https://i.imgur.com/XVqLgKI.gif)](i.imgur.com/XVqLgKI.gif)
 
-usage: ./03 type size [characters]
- options:
- --help, to display help page
- types:
- -b	binary
- -d	decimal
- -h	hexadecimal
- -c	capital letters
- -n	upper case alphanumerical
- -l	lower case alphanumerical
- -a	lower and upper case alphanumerical
- -s	alphanumerical(upper lower 0-9) with special characters
- -S	alphanumerical(upper lower 0-9) with more special characters
- -o size [A-Za-z0-9!"#$%&'\''()*+,-./:;<=>?@[]^_`{|}~]
- create a password with own set characters (tr like regex) [A-Za-z0-9!"#$%&'\''()*+,-./:;<=>?@[]^_`{|}~] of size size
-
- usage example:
- -b size, binary type password of size size
-
- Example:
- get binary password of length 18 011001011011110001
-  ./03 -b 18
- get alphanumeric password with extra special characters of length 15 \(N\'TMH\|lF\&oM6Xe
-  ./03 -S 15
- get hexadecimal password of length 4 96E7
-  ./03 -h 4
-```
+---
 
 ## System
 
