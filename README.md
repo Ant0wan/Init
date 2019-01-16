@@ -84,4 +84,10 @@ This enables SSH connection required by the "system" part.
 
 [![Process6](https://i.imgur.com/NjIx3Z9.png)](https://i.imgur.com/NjIx3Z9.png)
 
+- Select All files in one partition
 
+- Then select finish partitionning
+
+- Validate the partitioning as follow,
+
+[![Process7](https://i.imgur.com/uv0UeLu.png)](https://i.imgur.com/uv0UeLu.png)
