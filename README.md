@@ -66,4 +66,4 @@ This enables SSH connection required by the "system" part.
 - Set root passwords: root
 - Set users password: root
 
-[![Process3](https://i.imgur.com/kfrQTha.png)](https://i.imgur.com/kfrQTha.png)
+[![Process3](https://i.imgur.com/fYCCeNJ.png)](https://i.imgur.com/fYCCeNJ.png)
