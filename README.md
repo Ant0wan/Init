@@ -13,16 +13,18 @@ The part “Network” has been done on school’s Macs running with Darwin Kern
 
 - 01 gets the list of the network interfaces
 - 02 identifies and display the Ethernet interface characteristics, broadcast address and subnetwork IPs
-- 03  
-- 01:
-- 01:
-- 01:
-- 01:
-- 01:
-- 01:
-- 01:
-- 01:
-- 01:
+- 03 identifies the MAC address of the Wi-Fi card 
+- 04 identifies the default gateway in the routing table
+- 05 identifies the IP address of the DNS responding to an url
+- 06 complete path of the file that contains the IP address of the DNS server used by OS
+- 07 makes a query on an external DNS server 
+- 08 provider of a given .org
+- 09 finds the external IP of a given www.
+- 10 identifies the network devices between the network interface and a given domain
+- 11 name and IP address of the modem
+- 12 finds the IP that was assigned to the system by the dhcp server
+- 13 name of the host usgin reverse DNS
+- 14 
 
 
 ## Scripts
