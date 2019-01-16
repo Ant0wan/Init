@@ -25,7 +25,7 @@ The part “Network” has been done on school’s Macs running with Darwin Kern
 - 12 finds the IP that was assigned to the system by the dhcp server
 - 13 name of the host usgin reverse DNS
 - 14 path of file containing the local DNS entries
-- 15 add a reroute to /etc/hosts
+- 15 adds a reroute to /etc/hosts
 
 ## Scripts
 
@@ -43,6 +43,31 @@ It contains:
 ## System
 
 This part has been ran on a the Debian virtual machine (please refers to Virtual Machine below section).
+
+- 01 finds path of the file containing the installed OS (Debian)
+- 02 temporarily renames the system 
+- 03 permanently renames the system
+- 04 uptime
+- 05 determines the state of the SSH service
+- 06 restarts the SSH service
+- 07 finds the PID of the SSHD service
+- 08 RSA keys of systems that are authorized to connect via SSH
+- 09 "who" is connected to the system
+- 10 lists the partition tables of drives
+- 11 displays the available space left and used on the system in an humanly understandable way
+- 12 displays exact size of each folder of /var in a humanly understandable way followed by the path of it  
+- 13 displays, in real time, currently running processes 
+- 14 runs the ‘tail -f /var/log/syslog‘ command in background
+- 15 kills the backgrounded above-mentionned process
+- 16 services that runs specific tasks following a regular schedul
+- 17 connects VM using SSH
+- 18 kills ssh service
+- 19 lists all services which are started at boot time
+- 20 lists all existing users
+- 21 lists all real users
+- 22 adds a new local user
+- 23 steps to follow for connecting freshly added user
+- 24 lists all installed packages
 
 ---
 
