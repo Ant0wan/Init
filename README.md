@@ -11,6 +11,19 @@ This repository is split in 3 different parts: network, scripts, system.
 
 The part “Network” has been done on school’s Macs running with Darwin Kernel Version 16.7.0.
 
+- 01 gets the list of the network interfaces
+- 02 identifies and display the Ethernet interface characteristics, broadcast address and subnetwork IPs
+- 03  
+- 01:
+- 01:
+- 01:
+- 01:
+- 01:
+- 01:
+- 01:
+- 01:
+- 01:
+
 
 ## Scripts
 
@@ -19,9 +32,7 @@ This part can either be ran on a the Debian virtual machine or Macs (for vitual 
 It contains:
 
 - a script which displays only the login, UID and Path of each entry of the /etc/passwd file, 
-
 - a script which delete an ACTIVE user on the VM (make sure you logged in ssh before), 
-
 - and a password generator
 
 [![passwordgenerator](https://i.imgur.com/IdsM678.gif)](i.imgur.com/IdsM678.gif)
