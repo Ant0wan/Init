@@ -27,8 +27,8 @@ The following config has been used: <a href="https://www.virtualbox.org/wiki/Dow
 
 Virtual machine config:
 
--Name: debian_ontmp
--Type: Linux
--Version: Debian (64-bits)
--RAM: 2048MB
--Disks: VirtualBox Disk Image, dynamically allocated, 8GB, path: /tmp/[login]/
+- Name: debian_ontmp
+- Type: Linux
+- Version: Debian (64-bits)
+- RAM: 2048MB
+- Disks: VirtualBox Disk Image, dynamically allocated, 8GB, path: /tmp/[login]/
