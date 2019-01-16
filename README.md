@@ -29,7 +29,8 @@ It contains:
 [![passwordgenerator](https://i.imgur.com/IdsM678.gif)](i.imgur.com/IdsM678.gif)
 
 Usage:
-```
+
+```=SHELL
 usage: ./03 [-bdhcnlasSo] [size] [characters]
 --help to display help page
 ```
