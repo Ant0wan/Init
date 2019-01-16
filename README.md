@@ -32,3 +32,14 @@ Virtual machine config:
 - Version: Debian (64-bits)
 - RAM: 2048MB
 - Disks: VirtualBox Disk Image, dynamically allocated, 8GB, path: /tmp/[login]/
+
+Settings:
+
+- Processors: 4CPUs
+
+Display:
+
+- Video Memory: 128MB
+- Enable 3D Acceleratio
+
+n
