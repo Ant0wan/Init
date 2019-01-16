@@ -55,22 +55,24 @@ This enables SSH connection required by the "system" part.
 ### Installing Virtual Machine
 
 - Boot has been made on mini.iso.
+
 - Configure the network
 
-[![Process1](https://i.imgur.com/ylJVIEF.png)](https://i.imgur.com/ylJVIEF.png)
+[![Process1](https://i.imgur.com/ylJVIEF.png)](i.imgur.com/ylJVIEF.png)
 
 - Set username
 
-[![Process2](https://i.imgur.com/zajQ4n4.png)](https://i.imgur.com/zajQ4n4.png)
+[![Process2](https://i.imgur.com/zajQ4n4.png)](i.imgur.com/zajQ4n4.png)
 
 - Set root passwords: root
+
 - Set users password: root
 
-[![Process3](https://i.imgur.com/fYCCeNJ.png)](https://i.imgur.com/fYCCeNJ.png)
+[![Process3](https://i.imgur.com/fYCCeNJ.png)](i.imgur.com/fYCCeNJ.png)
 
 - Choose a mirror for doznloading Debian archive
 
-[![Process4](https://i.imgur.com/g6IZAuI.png)](https://i.imgur.com/g6IZAuI.png)
+[![Process4](https://i.imgur.com/g6IZAuI.png)](i.imgur.com/g6IZAuI.png)
 
 - Do not set proxy
 
@@ -78,11 +80,11 @@ This enables SSH connection required by the "system" part.
 
 - Select guided disk partitionning
 
-[![Process5](https://i.imgur.com/XkQY4fS.png)](https://i.imgur.com/XkQY4fS.png)
+[![Process5](https://i.imgur.com/XkQY4fS.png)](i.imgur.com/XkQY4fS.png)
 
 - Select the disk on which Debian will be installed
 
-[![Process6](https://i.imgur.com/NjIx3Z9.png)](https://i.imgur.com/NjIx3Z9.png)
+[![Process6](https://i.imgur.com/NjIx3Z9.png)](i.imgur.com/NjIx3Z9.png)
 
 - Select All files in one partition
 
@@ -90,4 +92,10 @@ This enables SSH connection required by the "system" part.
 
 - Validate the partitioning as follow,
 
-[![Process7](https://i.imgur.com/uv0UeLu.png)](https://i.imgur.com/uv0UeLu.png)
+[![Process7](https://i.imgur.com/uv0UeLu.png)](i.imgur.com/uv0UeLu.png)
+
+- Choose the packages: SSH server, standard system utilities and pick your favorite GUI
+
+[![Process8](https://i.imgur.com/0xaF2qY.png)](i.imgur.com/0xaF2qY.png)
+
+
