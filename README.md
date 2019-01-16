@@ -113,3 +113,13 @@ This enables SSH connection required by the "system" part.
 [![Process8](https://i.imgur.com/0xaF2qY.png)](i.imgur.com/0xaF2qY.png)
 
 - Install the GRUB boot loader : yes and continue
+
+- Turn off the machine closing the windows
+
+[![Process9](https://i.imgur.com/Rt8KPMT.png)](i.imgur.com/Rt8KPMT.png)
+
+- Delete the disk mini.iso from the disks in your VM's settings
+
+[![Process10](https://i.imgur.com/PdC3Ys4.png)](i.imgur.com/PdC3Ys4.png)
+
+The VM is now installed, enjoy !
