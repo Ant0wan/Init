@@ -55,7 +55,6 @@ This enables SSH connection required by the "system" part.
 ### Installing Virtual Machine
 
 - Boot has been made on mini.iso.
-
 - Configure the network
 
 [![Process1](https://i.imgur.com/ylJVIEF.png)](https://i.imgur.com/ylJVIEF.png)
@@ -64,8 +63,7 @@ This enables SSH connection required by the "system" part.
 
 [![Process2](https://i.imgur.com/zajQ4n4.png)](https://i.imgur.com/zajQ4n4.png)
 
-- Root passwords: root
+- Set root passwords: root
+- Set users password: root
 
-
-
-Users password: root
+[![Process3](https://i.imgur.com/kfrQTha.png)](https://i.imgur.com/kfrQTha.png)
