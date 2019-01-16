@@ -15,6 +15,46 @@ The part “Network” has been done on school’s Macs running with Darwin Kern
 
 This part can either be ran on a the Debian virtual machine or Macs (for vitual machine, please refers to Virtual Machine below section).
 
+It contains:
+
+- 
+
+- 
+
+- and a password generator
+
+```
+PASSWORD GENERATOR by abarthel
+version 0.1
+last update 2019-01-15
+
+usage: ./03 type size [characters]
+ options:
+ --help, to display help page
+ types:
+ -b	binary
+ -d	decimal
+ -h	hexadecimal
+ -c	capital letters
+ -n	upper case alphanumerical
+ -l	lower case alphanumerical
+ -a	lower and upper case alphanumerical
+ -s	alphanumerical(upper lower 0-9) with special characters
+ -S	alphanumerical(upper lower 0-9) with more special characters
+ -o size [A-Za-z0-9!"#$%&'\''()*+,-./:;<=>?@[]^_`{|}~]
+ create a password with own set characters (tr like regex) [A-Za-z0-9!"#$%&'\''()*+,-./:;<=>?@[]^_`{|}~] of size size
+
+ usage example:
+ -b size, binary type password of size size
+
+ Example:
+ get binary password of length 18 011001011011110001
+  ./03 -b 18
+ get alphanumeric password with extra special characters of length 15 \(N\'TMH\|lF\&oM6Xe
+  ./03 -S 15
+ get hexadecimal password of length 4 96E7
+  ./03 -h 4
+```
 
 ## System
 
@@ -29,73 +69,73 @@ The following config has been used: <a href="https://www.virtualbox.org/wiki/Dow
 ### Virtual machine config:
 
 - Name: debian_ontmp
-- Type: Linux
+	- Type: Linux
 - Version: Debian (64-bits)
-- RAM: 2048MB
-- Disks: VirtualBox Disk Image, dynamically allocated, 8GB, path: /tmp/[login]/
+	- RAM: 2048MB
+	- Disks: VirtualBox Disk Image, dynamically allocated, 8GB, path: /tmp/[login]/
 
-[![VirtualBoxMachine](https://i.imgur.com/TbLbIvc.png)](i.imgur.com/TbLbIvc.png)
+	[![VirtualBoxMachine](https://i.imgur.com/TbLbIvc.png)](i.imgur.com/TbLbIvc.png)
 
 ### Settings:
 
-- Processors: 4CPUs
+	- Processors: 4CPUs
 
-Display:
+	Display:
 
-- Video Memory: 128MB
-- Enable 3D Acceleration
+	- Video Memory: 128MB
+	- Enable 3D Acceleration
 
-Network:
+	Network:
 
-- Adapter 1: NAT
-- Adapter 2: Bridged Adapter en0: Ethernet
+	- Adapter 1: NAT
+	- Adapter 2: Bridged Adapter en0: Ethernet
 
-This enables SSH connection required by the "system" part.
+	This enables SSH connection required by the "system" part.
 
 ### Installing Virtual Machine
 
-- Boot has been made on mini.iso.
+	- Boot has been made on mini.iso.
 
-- Configure the network
+	- Configure the network
 
-[![Process1](https://i.imgur.com/ylJVIEF.png)](i.imgur.com/ylJVIEF.png)
+	[![Process1](https://i.imgur.com/ylJVIEF.png)](i.imgur.com/ylJVIEF.png)
 
-- Set username
+	- Set username
 
-[![Process2](https://i.imgur.com/zajQ4n4.png)](i.imgur.com/zajQ4n4.png)
+	[![Process2](https://i.imgur.com/zajQ4n4.png)](i.imgur.com/zajQ4n4.png)
 
-- Set root passwords: root
+	- Set root passwords: root
 
-- Set users password: root
+	- Set users password: root
 
-[![Process3](https://i.imgur.com/fYCCeNJ.png)](i.imgur.com/fYCCeNJ.png)
+	[![Process3](https://i.imgur.com/fYCCeNJ.png)](i.imgur.com/fYCCeNJ.png)
 
-- Choose a mirror for doznloading Debian archive
+	- Choose a mirror for doznloading Debian archive
 
-[![Process4](https://i.imgur.com/g6IZAuI.png)](i.imgur.com/g6IZAuI.png)
+	[![Process4](https://i.imgur.com/g6IZAuI.png)](i.imgur.com/g6IZAuI.png)
 
-- Do not set proxy
+	- Do not set proxy
 
-- Set username : username
+	- Set username : username
 
-- Select guided disk partitionning
+	- Select guided disk partitionning
 
-[![Process5](https://i.imgur.com/XkQY4fS.png)](i.imgur.com/XkQY4fS.png)
+	[![Process5](https://i.imgur.com/XkQY4fS.png)](i.imgur.com/XkQY4fS.png)
 
-- Select the disk on which Debian will be installed
+	- Select the disk on which Debian will be installed
 
-[![Process6](https://i.imgur.com/NjIx3Z9.png)](i.imgur.com/NjIx3Z9.png)
+	[![Process6](https://i.imgur.com/NjIx3Z9.png)](i.imgur.com/NjIx3Z9.png)
 
-- Select All files in one partition
+	- Select All files in one partition
 
-- Then select finish partitionning
+	- Then select finish partitionning
 
-- Validate the partitioning as follow,
+	- Validate the partitioning as follow,
 
-[![Process7](https://i.imgur.com/uv0UeLu.png)](i.imgur.com/uv0UeLu.png)
+	[![Process7](https://i.imgur.com/uv0UeLu.png)](i.imgur.com/uv0UeLu.png)
 
-- Choose the packages: SSH server, standard system utilities and pick your favorite GUI then press enter key
+	- Choose the packages: SSH server, standard system utilities and pick your favorite GUI then press enter key
 
-[![Process8](https://i.imgur.com/0xaF2qY.png)](i.imgur.com/0xaF2qY.png)
+	[![Process8](https://i.imgur.com/0xaF2qY.png)](i.imgur.com/0xaF2qY.png)
 
 
