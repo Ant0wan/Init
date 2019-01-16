@@ -43,73 +43,73 @@ The following config has been used: <a href="https://www.virtualbox.org/wiki/Dow
 ### Virtual machine config:
 
 - Name: debian_ontmp
-	- Type: Linux
+- Type: Linux
 - Version: Debian (64-bits)
-	- RAM: 2048MB
-	- Disks: VirtualBox Disk Image, dynamically allocated, 8GB, path: /tmp/[login]/
+- RAM: 2048MB
+- Disks: VirtualBox Disk Image, dynamically allocated, 8GB, path: /tmp/[login]/
 
 [![VirtualBoxMachine](https://i.imgur.com/TbLbIvc.png)](i.imgur.com/TbLbIvc.png)
 
 ### Settings:
 
-	- Processors: 4CPUs
+- Processors: 4CPUs
 
-	Display:
+- Display:
 
-	- Video Memory: 128MB
-	- Enable 3D Acceleration
+- Video Memory: 128MB
+- Enable 3D Acceleration
 
-	Network:
+- Network:
 
-	- Adapter 1: NAT
-	- Adapter 2: Bridged Adapter en0: Ethernet
+- Adapter 1: NAT
+- Adapter 2: Bridged Adapter en0: Ethernet
 
-	This enables SSH connection required by the "system" part.
+This enables SSH connection required by the "system" part.
 
 ### Installing Virtual Machine
 
-	- Boot has been made on mini.iso.
+- Boot has been made on mini.iso.
 
-	- Configure the network
+- Configure the network
 
 [![Process1](https://i.imgur.com/ylJVIEF.png)](i.imgur.com/ylJVIEF.png)
 
-	- Set username
+- Set username
 
 [![Process2](https://i.imgur.com/zajQ4n4.png)](i.imgur.com/zajQ4n4.png)
 
-	- Set root passwords: root
+- Set root passwords: root
 
-	- Set users password: root
+- Set users password: root
 
-	[![Process3](https://i.imgur.com/fYCCeNJ.png)](i.imgur.com/fYCCeNJ.png)
+[![Process3](https://i.imgur.com/fYCCeNJ.png)](i.imgur.com/fYCCeNJ.png)
 
-	- Choose a mirror for doznloading Debian archive
+- Choose a mirror for doznloading Debian archive
 
 [![Process4](https://i.imgur.com/g6IZAuI.png)](i.imgur.com/g6IZAuI.png)
 
-	- Do not set proxy
+- Do not set proxy
 
-	- Set username : username
+- Set username : username
 
-	- Select guided disk partitionning
+- Select guided disk partitionning
 
 [![Process5](https://i.imgur.com/XkQY4fS.png)](i.imgur.com/XkQY4fS.png)
 
-	- Select the disk on which Debian will be installed
+- Select the disk on which Debian will be installed
 
 [![Process6](https://i.imgur.com/NjIx3Z9.png)](i.imgur.com/NjIx3Z9.png)
 
-	- Select All files in one partition
+- Select All files in one partition
 
-	- Then select finish partitionning
+- Then select finish partitionning
 
-	- Validate the partitioning as follow,
+- Validate the partitioning as follow,
 
 [![Process7](https://i.imgur.com/uv0UeLu.png)](i.imgur.com/uv0UeLu.png)
 
-	- Choose the packages: SSH server, standard system utilities and pick your favorite GUI then press enter key
+- Choose the packages: SSH server, standard system utilities and pick your favorite GUI then press enter key
 
 [![Process8](https://i.imgur.com/0xaF2qY.png)](i.imgur.com/0xaF2qY.png)
 
-	- Install the GRUB boot loader : yes and continue
+- Install the GRUB boot loader : yes and continue
