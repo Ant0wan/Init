@@ -28,13 +28,6 @@ It contains:
 
 [![passwordgenerator](https://i.imgur.com/IdsM678.gif)](i.imgur.com/IdsM678.gif)
 
-Usage:
-
-```=SHELL
-usage: ./03 [-bdhcnlasSo] [size] [characters]
---help to display help page
-```
-
 ---
 
 ## System
@@ -55,7 +48,7 @@ The following config has been used: <a href="https://www.virtualbox.org/wiki/Dow
 	- RAM: 2048MB
 	- Disks: VirtualBox Disk Image, dynamically allocated, 8GB, path: /tmp/[login]/
 
-	[![VirtualBoxMachine](https://i.imgur.com/TbLbIvc.png)](i.imgur.com/TbLbIvc.png)
+[![VirtualBoxMachine](https://i.imgur.com/TbLbIvc.png)](i.imgur.com/TbLbIvc.png)
 
 ### Settings:
 
@@ -79,11 +72,11 @@ The following config has been used: <a href="https://www.virtualbox.org/wiki/Dow
 
 	- Configure the network
 
-	[![Process1](https://i.imgur.com/ylJVIEF.png)](i.imgur.com/ylJVIEF.png)
+[![Process1](https://i.imgur.com/ylJVIEF.png)](i.imgur.com/ylJVIEF.png)
 
 	- Set username
 
-	[![Process2](https://i.imgur.com/zajQ4n4.png)](i.imgur.com/zajQ4n4.png)
+[![Process2](https://i.imgur.com/zajQ4n4.png)](i.imgur.com/zajQ4n4.png)
 
 	- Set root passwords: root
 
@@ -93,7 +86,7 @@ The following config has been used: <a href="https://www.virtualbox.org/wiki/Dow
 
 	- Choose a mirror for doznloading Debian archive
 
-	[![Process4](https://i.imgur.com/g6IZAuI.png)](i.imgur.com/g6IZAuI.png)
+[![Process4](https://i.imgur.com/g6IZAuI.png)](i.imgur.com/g6IZAuI.png)
 
 	- Do not set proxy
 
@@ -101,11 +94,11 @@ The following config has been used: <a href="https://www.virtualbox.org/wiki/Dow
 
 	- Select guided disk partitionning
 
-	[![Process5](https://i.imgur.com/XkQY4fS.png)](i.imgur.com/XkQY4fS.png)
+[![Process5](https://i.imgur.com/XkQY4fS.png)](i.imgur.com/XkQY4fS.png)
 
 	- Select the disk on which Debian will be installed
 
-	[![Process6](https://i.imgur.com/NjIx3Z9.png)](i.imgur.com/NjIx3Z9.png)
+[![Process6](https://i.imgur.com/NjIx3Z9.png)](i.imgur.com/NjIx3Z9.png)
 
 	- Select All files in one partition
 
@@ -113,10 +106,10 @@ The following config has been used: <a href="https://www.virtualbox.org/wiki/Dow
 
 	- Validate the partitioning as follow,
 
-	[![Process7](https://i.imgur.com/uv0UeLu.png)](i.imgur.com/uv0UeLu.png)
+[![Process7](https://i.imgur.com/uv0UeLu.png)](i.imgur.com/uv0UeLu.png)
 
 	- Choose the packages: SSH server, standard system utilities and pick your favorite GUI then press enter key
 
-	[![Process8](https://i.imgur.com/0xaF2qY.png)](i.imgur.com/0xaF2qY.png)
+[![Process8](https://i.imgur.com/0xaF2qY.png)](i.imgur.com/0xaF2qY.png)
 
 	- Install the GRUB boot loader : yes and continue
