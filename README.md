@@ -26,7 +26,11 @@ It contains:
 
 - and a password generator
 
-[![passwordgenerator](https://i.imgur.com/XVqLgKI.gif)](i.imgur.com/XVqLgKI.gif)
+[![passwordgenerator](https://i.imgur.com/LBT7el6.gif)](i.imgur.com/LBT7el6.gif)
+
+```
+
+```
 
 ---
 
@@ -112,4 +116,4 @@ The following config has been used: <a href="https://www.virtualbox.org/wiki/Dow
 
 	[![Process8](https://i.imgur.com/0xaF2qY.png)](i.imgur.com/0xaF2qY.png)
 
-
+	- Install the GRUB boot loader : yes and continue
