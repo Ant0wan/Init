@@ -26,10 +26,12 @@ It contains:
 
 - and a password generator
 
-[![passwordgenerator](https://i.imgur.com/LBT7el6.gif)](i.imgur.com/LBT7el6.gif)
+[![passwordgenerator](https://i.imgur.com/IdsM678.gif)](i.imgur.com/IdsM678.gif)
 
+Usage:
 ```
-
+usage: ./03 [-bdhcnlasSo] [size] [characters]
+--help to display help page
 ```
 
 ---
