@@ -23,4 +23,6 @@ This part has been ran on a the Debian virtual machine (please refers to Virtual
 
 ## Virtual Machine
 
-(VirtualBox + Debian netboot mini.iso 2018-11-10) with the following setup:
+The following config has been used: VirtualBox + <a href="http://ftp.nl.debian.org/debian/dists/stretch/main/installer-amd64/current/images/netboot/" target="_blank">Debian netboot mini.iso</a> 2018-11-10.
+
+
