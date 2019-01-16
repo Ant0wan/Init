@@ -2,5 +2,5 @@
 
 ## System and Network Administration
 
-Introduction subject to system and Network Administration <a href="https://cdn.intra.42.fr/pdf/pdf/886/fillit.en.pdf" target="_blank">Fillit [a 42 project]</a>.
+This repository contains the scripts and answers to the <a href="https://cdn.intra.42.fr/pdf/pdf/886/fillit.en.pdf" target="_blank">init [a 42 project]</a>. Init is an introduction subject to system and network administration allowing 42's students to discover system and network basic commandsas well as many of the services used on a server machines.
 
