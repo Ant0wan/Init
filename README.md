@@ -40,6 +40,13 @@ Settings:
 Display:
 
 - Video Memory: 128MB
-- Enable 3D Acceleratio
+- Enable 3D Acceleration
 
-n
+Network:
+
+- Adapter 1: NAT
+- Adapter 2: Bridged Adapter en0: Ethernet
+
+This enables SSH connection required by the "system" part.
+
+Boot has been made on mini.iso.
