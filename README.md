@@ -25,6 +25,8 @@ This part has been ran on a the Debian virtual machine (please refers to Virtual
 
 The following config has been used: <a href="https://www.virtualbox.org/wiki/Downloads" target="_blank">VirtualBox 6.0.2</a> + <a href="http://ftp.nl.debian.org/debian/dists/stretch/main/installer-amd64/current/images/netboot/" target="_blank">Debian netboot mini.iso</a> 2018-11-10.
 
+[![VirtualBoxMachine](https://i.imgur.com/TbLbIvc.png)](i.imgur.com/TbLbIvc.png)
+
 Virtual machine config:
 
 - Name: debian_ontmp
@@ -50,3 +52,9 @@ Network:
 This enables SSH connection required by the "system" part.
 
 Boot has been made on mini.iso.
+
+Root passwords: root
+
+
+
+Users password: root
