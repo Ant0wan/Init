@@ -37,6 +37,22 @@ It contains:
 - a script which delete an ACTIVE user on the VM (make sure you logged in ssh before), 
 - and a password generator
 
+Password generator output sample
+
+```SHELL=
+> ./03 -S 18
+0t)@IEnlhQmH_0o#V'
+
+> ./03 -b 10
+1100001011
+
+> ./03 -o 28 A-Bw-z0-4-+/
+Ay1-y4w+-10343wB+/224y+2-yzA
+
+```
+
+Password generator usage demo
+
 [![passwordgenerator](https://i.imgur.com/IdsM678.gif)](i.imgur.com/IdsM678.gif)
 
 
